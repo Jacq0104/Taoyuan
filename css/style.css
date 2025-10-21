@@ -93,21 +93,23 @@ nav.main-nav {
 .language-switcher {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .lang-btn {
-  padding: 6px 12px;
+  padding: 5px 10px;
   border: 2px solid var(--brand);
   background: transparent;
   color: var(--brand);
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-weight: 600;
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  min-width: 35px;
+  text-align: center;
 }
 
 .lang-btn:hover {
@@ -295,12 +297,13 @@ footer a {
   }
   
   .language-switcher {
-    gap: 4px;
+    gap: 3px;
   }
   
   .lang-btn {
-    padding: 4px 8px;
-    font-size: 0.8em;
+    padding: 3px 6px;
+    font-size: 0.75em;
+    min-width: 30px;
   }
 }
 

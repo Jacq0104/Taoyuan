@@ -3,13 +3,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get current page path
     const currentPath = window.location.pathname;
     const isEnglish = currentPath.includes('/en/');
+    const isCzech = currentPath.includes('/cs/');
     
     // Update language switcher buttons
     const langButtons = document.querySelectorAll('.lang-btn');
     langButtons.forEach(button => {
-        if (button.textContent.trim() === 'EN' && isEnglish) {
+        const buttonText = button.textContent.trim();
+        
+        if (buttonText === 'EN' && isEnglish) {
             button.classList.add('active');
-        } else if (button.textContent.trim() === '繁中' && !isEnglish) {
+        } else if (buttonText === 'CS' && isCzech) {
+            button.classList.add('active');
+        } else if (buttonText === '繁中' && !isEnglish && !isCzech) {
             button.classList.add('active');
         } else {
             button.classList.remove('active');
@@ -27,7 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Store language preference in localStorage
-    const currentLang = isEnglish ? 'en' : 'zh';
+    let currentLang = 'zh'; // default to Chinese
+    if (isEnglish) currentLang = 'en';
+    if (isCzech) currentLang = 'cs';
     localStorage.setItem('preferred-language', currentLang);
 });
 
@@ -45,13 +52,26 @@ function switchLanguage(targetLang) {
         // Switch to English
         if (currentPath.includes('/en/')) {
             newPath = currentPath; // Already in English
+        } else if (currentPath.includes('/cs/')) {
+            newPath = currentPath.replace('/cs', '/en');
         } else {
             newPath = '/en' + currentPath;
+        }
+    } else if (targetLang === 'cs') {
+        // Switch to Czech
+        if (currentPath.includes('/cs/')) {
+            newPath = currentPath; // Already in Czech
+        } else if (currentPath.includes('/en/')) {
+            newPath = currentPath.replace('/en', '/cs');
+        } else {
+            newPath = '/cs' + currentPath;
         }
     } else {
         // Switch to Chinese
         if (currentPath.includes('/en/')) {
             newPath = currentPath.replace('/en', '');
+        } else if (currentPath.includes('/cs/')) {
+            newPath = currentPath.replace('/cs', '');
         } else {
             newPath = currentPath; // Already in Chinese
         }
