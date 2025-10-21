@@ -61,34 +61,19 @@ img {
   width: 36px;
   height: 36px;
   border-radius: 4px;
-  background: var(--brand);
+  background: transparent;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-/* 桃園市LOGO的訊號粒子效果 */
-.brand-logo::before {
-  content: '';
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 6px;
-  height: 6px;
-  background: var(--accent-blue);
-  border-radius: 1px;
-}
-
-.brand-logo::after {
-  content: '';
-  position: absolute;
-  bottom: 6px;
-  left: 6px;
-  width: 4px;
-  height: 4px;
-  background: var(--accent-yellow);
-  border-radius: 1px;
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .brand-title {
@@ -302,6 +287,11 @@ footer a {
   
   .brand-title {
     font-size: 1em;
+  }
+  
+  .brand-logo {
+    width: 28px;
+    height: 28px;
   }
   
   .language-switcher {
