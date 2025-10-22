@@ -1,8 +1,8 @@
-window.onload = function() {
-  setTimeout(() => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth"
-    });
-  }, 1000);
-};
+// window.onload = function() {
+//   setTimeout(() => {
+//     window.scrollTo({
+//       top: document.body.scrollHeight,
+//       behavior: "smooth"
+//     });
+//   }, 1000);
+// };
