@@ -1,15 +1,137 @@
-<html>
-    <head>
-        <title>TaoyuanCity</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <button>News</button>
-        <button>About</button>
-        <!-- 景點加食物 -->
-        <button>Spot</button>
-        <button>Transportation</button>
-        <button>Information</button>
-        <button>Specialties</button>
-    </body>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <title>桃園 Taoyuan • 山海之間的國門城市</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-wrap">
+    <a class="brand" href="index.html" aria-label="Taoyuan Home">
+      <span class="brand-logo" aria-hidden="true">
+        <img src="images/桃園.png" alt="桃園市LOGO">
+      </span>
+      <span class="brand-title">Taoyuan • 桃園</span>
+    </a>
+    <nav class="main-nav" aria-label="Global">
+      <ul>
+        <li><a href="index.html" aria-current="page">首頁</a></li>
+        <li><a href="news.html">新聞/活動</a></li>
+        <li><a href="history.html">歷史/文化</a></li>
+        <li><a href="sights.html">景點</a></li>
+        <li><a href="food.html">美食</a></li>
+        <li><a href="services.html">服務</a></li>
+        <li><a href="contact.html">聯絡</a></li>
+      </ul>
+      <div class="language-switcher">
+        <a href="index.html" class="lang-btn active">繁中</a>
+        <a href="en/index.html" class="lang-btn">EN</a>
+        <a href="cs/index.html" class="lang-btn">CS</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container" id="content">
+  <section class="hero-section">
+    <h1>山海之間的國門城市</h1>
+    <p>桃園，以國際機場為門戶、群山與水庫為景，移工文化交織出「小東南亞」的多彩日常</p>
+  </section>
+
+  <section class="card">
+    <p class="kicker">Welcome to Taoyuan</p>
+    <h2>探索桃園的多元魅力</h2>
+    <p>從拉拉山的雲霧繚繞到石門水庫的湖光山色，從大溪老街的巴洛克建築到忠貞新村的雲南料理，桃園展現了自然與人文的完美融合。</p>
+    
+    <div class="image-gallery">
+      <img src="images/lalashan.jpg" alt="拉拉山雲霧繚繞的檜木林">
+      <img src="images/xiaowulai.jpg" alt="小烏來天空步道與瀑布">
+      <img src="images/shihmen.jpg" alt="石門水庫壩頂與湖景">
+      <img src="images/daxi-oldstreet.jpg" alt="大溪老街巴洛克立面">
+      <img src="images/zhongzhen.jpg" alt="忠貞新村街景與雲南料理">
+      <img src="images/airport.jpg" alt="桃園國際機場航站大廳">
+    </div>
+  </section>
+
+  <section class="layout" aria-label="主內容與側欄">
+    <aside class="sidebar">
+      <div class="card">
+        <h3>快速導覽</h3>
+        <ul>
+          <li><a href="sights.html#lalashan">拉拉山</a></li>
+          <li><a href="sights.html#xiaowulai">小烏來風景區</a></li>
+          <li><a href="sights.html#shihmen">石門水庫</a></li>
+          <li><a href="sights.html#daxi">大溪老街</a></li>
+          <li><a href="sights.html#zhongzhen">忠貞新村</a></li>
+          <li><a href="sights.html#airport">桃園國際機場</a></li>
+        </ul>
+      </div>
+      
+      <div class="card">
+        <h3>本月活動</h3>
+        <div class="event-item">
+          <p class="event-date">12月每週末</p>
+          <p><strong>大溪老街歲末市集</strong></p>
+          <p>手作與在地農產，音樂小舞台</p>
+        </div>
+        <div class="event-item">
+          <p class="event-date">12月每週六</p>
+          <p><strong>拉拉山冬季健行</strong></p>
+          <p>08:30集合，需注意保暖</p>
+        </div>
+        <p><a href="news.html">查看更多活動 →</a></p>
+      </div>
+    </aside>
+
+    <section class="card">
+      <h2>什麼是「小東南亞」？</h2>
+      <p>桃園擁有臺灣最大的工業聚落之一，來自泰國、越南、印尼、菲律賓等地的移工在此工作生活，造就獨特的多語餐飲街景與節慶活動。</p>
+      
+      <div class="grid grid-2">
+        <article class="card charming-taoyuan">
+          <h3>忠貞新村的異國風味</h3>
+          <p>滇緬移民的雲南料理在此扎根，酸辣開胃、香草入菜，是在地不可錯過的味道。</p>
+          <a href="food.html#zhongzhen">看更多美食 →</a>
+        </article>
+        
+        <article class="card eco-sustainable">
+          <h3>山城與水庫的戶外日常</h3>
+          <p>周末到拉拉山看雲海、在石門水庫騎車環湖，大溪老街喝咖啡逛老屋。</p>
+          <a href="sights.html">探索景點 →</a>
+        </article>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card family-friendly">
+          <h3>客家文化的核心</h3>
+          <p>桃園是全臺客家人口最多的城市，傳統節慶與美食展現深厚的文化底蘊。</p>
+          <a href="history.html">了解歷史文化 →</a>
+        </article>
+        
+        <article class="card tech-highlight">
+          <h3>國際門戶的便利</h3>
+          <p>桃園國際機場連接世界，機場捷運讓市區與機場無縫接軌。</p>
+          <a href="services.html">交通服務 →</a>
+        </article>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-wrap">
+    <div>
+      <strong>Taoyuan • 桃園</strong><br>
+      山海相連的國門城市
+    </div>
+    <div>
+      <a href="contact.html">聯絡我們</a> ｜ <a href="news.html">活動與新聞</a> ｜ <a href="services.html">旅遊服務</a>
+    </div>
+    <small>© 2025 Taoyuan City Student Project. 圖片僅供學術用途。</small>
+  </div>
+</footer>
+<script src="scripts/language-switcher.js"></script>
+</body>
 </html>
