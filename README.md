@@ -12,7 +12,7 @@
 ## 網站結構
 ```
 Taoyuan/
-├── index.html          # 首頁（Landing Page）
+├── index.html          # 首頁
 ├── news.html           # 新聞/活動/行事曆
 ├── history.html        # 歷史/文化（含客家文化）
 ├── sights.html         # 景點介紹
