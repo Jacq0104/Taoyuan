@@ -1,235 +1,201 @@
 <!doctype html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="utf-8">
   <title>美食｜桃園 Taoyuan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
+  <script src="scripts/shared-component.js"></script>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="header-wrap">
-    <a class="brand" href="index.html" aria-label="Taoyuan Home">
-      <span class="brand-logo" aria-hidden="true">
-        <img src="images/桃園.png" alt="桃園市LOGO">
-      </span>
-      <span class="brand-title">Taoyuan • 桃園</span>
-    </a>
-    <nav class="main-nav" aria-label="Global">
-      <ul>
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="news.html">新聞/活動</a></li>
-        <li><a href="history.html">歷史/文化</a></li>
-        <li><a href="sights.html">景點</a></li>
-        <li><a href="food.html" aria-current="page">美食</a></li>
-        <li><a href="services.html">服務</a></li>
-        <li><a href="contact.html">聯絡</a></li>
-      </ul>
-      <div class="language-switcher">
-        <a href="food.html" class="lang-btn active">繁中</a>
-        <a href="en/food.html" class="lang-btn">EN</a>
-        <a href="cs/food.html" class="lang-btn">CS</a>
-      </div>
-    </nav>
-  </div>
-</header>
+  <site-header></site-header>
+  <main class="container">
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="card">
+          <h3>美食分類</h3>
+          <ul>
+            <li><a href="#yunnan">雲南料理</a></li>
+            <li><a href="#fish">活魚料理</a></li>
+            <li><a href="#hakka">客家美食</a></li>
+            <li><a href="#local">在地小吃</a></li>
+            <li><a href="#international">異國料理</a></li>
+          </ul>
+        </div>
 
-<main class="container">
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="card">
-        <h3>美食分類</h3>
-        <ul>
-          <li><a href="#yunnan">雲南料理</a></li>
-          <li><a href="#fish">活魚料理</a></li>
-          <li><a href="#hakka">客家美食</a></li>
-          <li><a href="#local">在地小吃</a></li>
-          <li><a href="#international">異國料理</a></li>
-        </ul>
-      </div>
-      
-      <div class="card">
-        <h3>推薦餐廳</h3>
-        <ul>
-          <li>忠貞新村雲南料理</li>
-          <li>石門水庫活魚餐廳</li>
-          <li>大溪老街豆干店</li>
-          <li>客家粄條專賣店</li>
-          <li>東南亞料理街</li>
-        </ul>
-      </div>
-    </aside>
+        <div class="card">
+          <h3>推薦餐廳</h3>
+          <ul>
+            <li>忠貞新村雲南料理</li>
+            <li>石門水庫活魚餐廳</li>
+            <li>大溪老街豆干店</li>
+            <li>客家粄條專賣店</li>
+            <li>東南亞料理街</li>
+          </ul>
+        </div>
+      </aside>
 
-    <section class="card">
-      <h1>桃園在地美食</h1>
-      
-      <section id="yunnan">
-        <h2>忠貞新村的雲南料理</h2>
-        <p>滇緬移民帶來的家鄉味，酸辣清爽、香草層次豐富，是桃園最具特色的異國料理。</p>
-        
-        <div class="food-item charming-taoyuan">
-          <img src="images/yunnan-food.jpg" alt="雲南料理：米干與酸辣小菜">
-          <div class="food-content">
-            <h3>經典雲南料理</h3>
-            <p><strong>破酥包：</strong>外皮酥脆，內餡豐富，是忠貞新村的招牌點心。</p>
-            <p><strong>米干：</strong>Q彈的米製麵條，搭配酸辣湯頭與豐富配料。</p>
-            <p><strong>涼拌木瓜：</strong>清爽開胃的涼菜，酸辣中帶有木瓜的香甜。</p>
-            <p><strong>香茅料理：</strong>使用新鮮香茅調味，香氣濃郁。</p>
+      <section class="card">
+        <h1>桃園在地美食</h1>
+
+        <section id="yunnan">
+          <h2>忠貞新村的雲南料理</h2>
+          <p>滇緬移民帶來的家鄉味，酸辣清爽、香草層次豐富，是桃園最具特色的異國料理。</p>
+
+          <div class="food-item charming-taoyuan">
+            <img src="images/yunnan-food.jpg" alt="雲南料理：米干與酸辣小菜">
+            <div class="food-content">
+              <h3>經典雲南料理</h3>
+              <p><strong>破酥包：</strong>外皮酥脆，內餡豐富，是忠貞新村的招牌點心。</p>
+              <p><strong>米干：</strong>Q彈的米製麵條，搭配酸辣湯頭與豐富配料。</p>
+              <p><strong>涼拌木瓜：</strong>清爽開胃的涼菜，酸辣中帶有木瓜的香甜。</p>
+              <p><strong>香茅料理：</strong>使用新鮮香茅調味，香氣濃郁。</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="grid grid-2">
-          <article class="card">
-            <h3>推薦店家</h3>
-            <p><strong>阿美米干：</strong>老字號雲南料理店，米干湯頭濃郁</p>
-            <p><strong>忠貞新村市場：</strong>多家雲南小吃攤位，選擇豐富</p>
-            <p><strong>雲南小館：</strong>道地滇緬風味，環境舒適</p>
-          </article>
-          
-          <article class="card">
-            <h3>用餐資訊</h3>
-            <p><strong>最佳時間：</strong>午餐時段（11:30-14:00）</p>
-            <p><strong>平均消費：</strong>100-200元/人</p>
-            <p><strong>特色：</strong>可體驗滇緬文化與歷史</p>
-          </article>
-        </div>
-      </section>
 
-      <section id="fish">
-        <h2>石門水庫「活魚三吃」</h2>
-        <p>以新鮮活魚現做，常見組合：清蒸、糖醋、味噌湯等，多人共享最對味。</p>
-        
-        <div class="food-item eco-sustainable">
-          <img src="images/fish-dish.jpg" alt="活魚三吃餐桌呈現">
-          <div class="food-content">
-            <h3>活魚料理特色</h3>
-            <p><strong>清蒸魚：</strong>保持魚肉鮮甜，搭配薑絲與蔥花</p>
-            <p><strong>糖醋魚：</strong>酸甜開胃，適合配飯</p>
-            <p><strong>味噌魚湯：</strong>濃郁湯頭，暖胃又營養</p>
-            <p><strong>其他選擇：</strong>紅燒、椒鹽、蒜蓉等口味</p>
+          <div class="grid grid-2">
+            <article class="card">
+              <h3>推薦店家</h3>
+              <p><strong>阿美米干：</strong>老字號雲南料理店，米干湯頭濃郁</p>
+              <p><strong>忠貞新村市場：</strong>多家雲南小吃攤位，選擇豐富</p>
+              <p><strong>雲南小館：</strong>道地滇緬風味，環境舒適</p>
+            </article>
+
+            <article class="card">
+              <h3>用餐資訊</h3>
+              <p><strong>最佳時間：</strong>午餐時段（11:30-14:00）</p>
+              <p><strong>平均消費：</strong>100-200元/人</p>
+              <p><strong>特色：</strong>可體驗滇緬文化與歷史</p>
+            </article>
           </div>
-        </div>
-        
-        <div class="grid grid-2">
-          <article class="card">
-            <h3>推薦餐廳</h3>
-            <p><strong>石門活魚街：</strong>多家活魚餐廳聚集，選擇多樣</p>
-            <p><strong>阿婆活魚：</strong>老字號餐廳，口味傳統</p>
-            <p><strong>水庫活魚：</strong>環境優美，可邊用餐邊賞湖景</p>
-          </article>
-          
-          <article class="card">
-            <h3>用餐建議</h3>
-            <p><strong>最佳時間：</strong>晚餐時段，可欣賞夕陽</p>
-            <p><strong>建議人數：</strong>4-8人，可品嚐多種口味</p>
-            <p><strong>平均消費：</strong>300-500元/人</p>
-          </article>
-        </div>
-      </section>
+        </section>
 
-      <section id="hakka">
-        <h2>客家美食</h2>
-        <p>桃園客家人口眾多，客家美食隨處可見，展現深厚的文化底蘊。</p>
-        
-        <div class="grid grid-3">
-          <article class="card family-friendly">
-            <h3>粄條</h3>
-            <p>Q彈的米製麵條，搭配肉燥與韭菜，是客家經典主食。</p>
-            <p><strong>推薦：</strong>中壢粄條街</p>
-          </article>
-          
-          <article class="card family-friendly">
-            <h3>菜包</h3>
-            <p>以蘿蔔絲為餡的傳統點心，外皮Q軟，內餡香甜。</p>
-            <p><strong>推薦：</strong>大溪老街</p>
-          </article>
-          
-          <article class="card family-friendly">
-            <h3>擂茶</h3>
-            <p>將茶葉、芝麻、花生研磨成粉的養生飲品，香氣濃郁。</p>
-            <p><strong>推薦：</strong>龍潭茶鄉</p>
-          </article>
-        </div>
-      </section>
+        <section id="fish">
+          <h2>石門水庫「活魚三吃」</h2>
+          <p>以新鮮活魚現做，常見組合：清蒸、糖醋、味噌湯等，多人共享最對味。</p>
 
-      <section id="local">
-        <h2>在地小吃</h2>
-        <p>桃園各區都有代表性的在地小吃，展現地方特色。</p>
-        
-        <div class="grid grid-2">
-          <article class="card">
-            <h3>大溪豆干</h3>
-            <p>大溪老街的招牌美食，口感Q彈，有多種口味選擇。</p>
-            <p><strong>推薦店家：</strong>黃日香、萬里香</p>
-            <p><strong>特色：</strong>傳統手工製作，口感獨特</p>
-          </article>
-          
-          <article class="card">
-            <h3>花生糖</h3>
-            <p>大溪老街的傳統甜點，香脆可口，是伴手禮首選。</p>
-            <p><strong>推薦店家：</strong>老街花生糖</p>
-            <p><strong>特色：</strong>手工製作，不添加防腐劑</p>
-          </article>
-        </div>
-      </section>
+          <div class="food-item eco-sustainable">
+            <img src="images/fish-dish.jpg" alt="活魚三吃餐桌呈現">
+            <div class="food-content">
+              <h3>活魚料理特色</h3>
+              <p><strong>清蒸魚：</strong>保持魚肉鮮甜，搭配薑絲與蔥花</p>
+              <p><strong>糖醋魚：</strong>酸甜開胃，適合配飯</p>
+              <p><strong>味噌魚湯：</strong>濃郁湯頭，暖胃又營養</p>
+              <p><strong>其他選擇：</strong>紅燒、椒鹽、蒜蓉等口味</p>
+            </div>
+          </div>
 
-      <section id="international">
-        <h2>異國料理</h2>
-        <p>桃園的「小東南亞」特色，讓異國料理成為城市美食的重要組成。</p>
-        
-        <div class="grid grid-2">
-          <article class="card">
-            <h3>東南亞料理</h3>
-            <p>龜山、平鎮等工業區聚集大量東南亞移工，形成豐富的異國料理街景。</p>
-            <p><strong>越南菜：</strong>河粉、春捲、越南咖啡</p>
-            <p><strong>泰國菜：</strong>泰式炒河粉、綠咖哩、芒果糯米</p>
-            <p><strong>印尼菜：</strong>印尼炒飯、沙嗲、椰漿飯</p>
-          </article>
-          
-          <article class="card">
-            <h3>其他異國料理</h3>
-            <p>桃園國際機場周邊也有各國料理，滿足不同口味需求。</p>
-            <p><strong>日式料理：</strong>壽司、拉麵、居酒屋</p>
-            <p><strong>韓式料理：</strong>韓式烤肉、石鍋拌飯</p>
-            <p><strong>西式料理：</strong>義大利麵、美式漢堡</p>
-          </article>
-        </div>
-      </section>
+          <div class="grid grid-2">
+            <article class="card">
+              <h3>推薦餐廳</h3>
+              <p><strong>石門活魚街：</strong>多家活魚餐廳聚集，選擇多樣</p>
+              <p><strong>阿婆活魚：</strong>老字號餐廳，口味傳統</p>
+              <p><strong>水庫活魚：</strong>環境優美，可邊用餐邊賞湖景</p>
+            </article>
 
-      <section id="food-tours">
-        <h2>美食導覽</h2>
-        
-        <div class="grid grid-2">
-          <article class="card">
-            <h3>忠貞新村美食之旅</h3>
-            <p><strong>路線：</strong>忠貞新村市場 → 雲南料理店 → 滇緬文化展示</p>
-            <p>體驗完整的滇緬文化與美食，了解移民歷史。</p>
-            <p><strong>建議時間：</strong>2-3小時</p>
-          </article>
-          
-          <article class="card">
-            <h3>大溪老街美食探索</h3>
-            <p><strong>路線：</strong>大溪老街 → 豆干店 → 花生糖店 → 客家菜館</p>
-            <p>品嚐傳統客家美食與在地小吃。</p>
-            <p><strong>建議時間：</strong>3-4小時</p>
-          </article>
-        </div>
-      </section>
-    </section>
-  </div>
-</main>
+            <article class="card">
+              <h3>用餐建議</h3>
+              <p><strong>最佳時間：</strong>晚餐時段，可欣賞夕陽</p>
+              <p><strong>建議人數：</strong>4-8人，可品嚐多種口味</p>
+              <p><strong>平均消費：</strong>300-500元/人</p>
+            </article>
+          </div>
+        </section>
 
-<footer>
-  <div class="footer-wrap">
-    <div>
-      <strong>Taoyuan • 桃園</strong><br>
-      山海相連的國門城市
+        <section id="hakka">
+          <h2>客家美食</h2>
+          <p>桃園客家人口眾多，客家美食隨處可見，展現深厚的文化底蘊。</p>
+
+          <div class="grid grid-3">
+            <article class="card family-friendly">
+              <h3>粄條</h3>
+              <p>Q彈的米製麵條，搭配肉燥與韭菜，是客家經典主食。</p>
+              <p><strong>推薦：</strong>中壢粄條街</p>
+            </article>
+
+            <article class="card family-friendly">
+              <h3>菜包</h3>
+              <p>以蘿蔔絲為餡的傳統點心，外皮Q軟，內餡香甜。</p>
+              <p><strong>推薦：</strong>大溪老街</p>
+            </article>
+
+            <article class="card family-friendly">
+              <h3>擂茶</h3>
+              <p>將茶葉、芝麻、花生研磨成粉的養生飲品，香氣濃郁。</p>
+              <p><strong>推薦：</strong>龍潭茶鄉</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="local">
+          <h2>在地小吃</h2>
+          <p>桃園各區都有代表性的在地小吃，展現地方特色。</p>
+
+          <div class="grid grid-2">
+            <article class="card">
+              <h3>大溪豆干</h3>
+              <p>大溪老街的招牌美食，口感Q彈，有多種口味選擇。</p>
+              <p><strong>推薦店家：</strong>黃日香、萬里香</p>
+              <p><strong>特色：</strong>傳統手工製作，口感獨特</p>
+            </article>
+
+            <article class="card">
+              <h3>花生糖</h3>
+              <p>大溪老街的傳統甜點，香脆可口，是伴手禮首選。</p>
+              <p><strong>推薦店家：</strong>老街花生糖</p>
+              <p><strong>特色：</strong>手工製作，不添加防腐劑</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="international">
+          <h2>異國料理</h2>
+          <p>桃園的「小東南亞」特色，讓異國料理成為城市美食的重要組成。</p>
+
+          <div class="grid grid-2">
+            <article class="card">
+              <h3>東南亞料理</h3>
+              <p>龜山、平鎮等工業區聚集大量東南亞移工，形成豐富的異國料理街景。</p>
+              <p><strong>越南菜：</strong>河粉、春捲、越南咖啡</p>
+              <p><strong>泰國菜：</strong>泰式炒河粉、綠咖哩、芒果糯米</p>
+              <p><strong>印尼菜：</strong>印尼炒飯、沙嗲、椰漿飯</p>
+            </article>
+
+            <article class="card">
+              <h3>其他異國料理</h3>
+              <p>桃園國際機場周邊也有各國料理，滿足不同口味需求。</p>
+              <p><strong>日式料理：</strong>壽司、拉麵、居酒屋</p>
+              <p><strong>韓式料理：</strong>韓式烤肉、石鍋拌飯</p>
+              <p><strong>西式料理：</strong>義大利麵、美式漢堡</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="food-tours">
+          <h2>美食導覽</h2>
+
+          <div class="grid grid-2">
+            <article class="card">
+              <h3>忠貞新村美食之旅</h3>
+              <p><strong>路線：</strong>忠貞新村市場 → 雲南料理店 → 滇緬文化展示</p>
+              <p>體驗完整的滇緬文化與美食，了解移民歷史。</p>
+              <p><strong>建議時間：</strong>2-3小時</p>
+            </article>
+
+            <article class="card">
+              <h3>大溪老街美食探索</h3>
+              <p><strong>路線：</strong>大溪老街 → 豆干店 → 花生糖店 → 客家菜館</p>
+              <p>品嚐傳統客家美食與在地小吃。</p>
+              <p><strong>建議時間：</strong>3-4小時</p>
+            </article>
+          </div>
+        </section>
+      </section>
     </div>
-    <div>
-      <a href="contact.html">聯絡我們</a> ｜ <a href="news.html">活動與新聞</a> ｜ <a href="services.html">旅遊服務</a>
-    </div>
-    <small>© 2025 Taoyuan City Student Project. 圖片僅供學術用途。</small>
-  </div>
-</footer>
+  </main>
+  <site-footer></site-footer>
 </body>
+
 </html>

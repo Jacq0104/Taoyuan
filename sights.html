@@ -1,212 +1,178 @@
 <!doctype html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="utf-8">
   <title>景點｜桃園 Taoyuan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
+  <script src="scripts/header-component.js"></script>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="header-wrap">
-    <a class="brand" href="index.html" aria-label="Taoyuan Home">
-      <span class="brand-logo" aria-hidden="true">
-        <img src="images/桃園.png" alt="桃園市LOGO">
-      </span>
-      <span class="brand-title">Taoyuan • 桃園</span>
-    </a>
-    <nav class="main-nav" aria-label="Global">
-      <ul>
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="news.html">新聞/活動</a></li>
-        <li><a href="history.html">歷史/文化</a></li>
-        <li><a href="sights.html" aria-current="page">景點</a></li>
-        <li><a href="food.html">美食</a></li>
-        <li><a href="services.html">服務</a></li>
-        <li><a href="contact.html">聯絡</a></li>
-      </ul>
-      <div class="language-switcher">
-        <a href="sights.html" class="lang-btn active">繁中</a>
-        <a href="en/sights.html" class="lang-btn">EN</a>
-        <a href="cs/sights.html" class="lang-btn">CS</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="card">
-        <h3>景點分類</h3>
-        <ul>
-          <li><a href="#nature">自然景觀</a></li>
-          <li><a href="#heritage">人文古蹟</a></li>
-          <li><a href="#transport">交通地標</a></li>
-          <li><a href="#culture">文化聚落</a></li>
-        </ul>
-      </div>
-      
-      <div class="card">
-        <h3>推薦路線</h3>
-        <ul>
-          <li><a href="#route1">山線一日遊</a></li>
-          <li><a href="#route2">水庫環湖遊</a></li>
-          <li><a href="#route3">老街文化遊</a></li>
-          <li><a href="#route4">機場周邊遊</a></li>
-        </ul>
-      </div>
-    </aside>
-
-    <section class="card">
-      <h1>桃園精選景點</h1>
-      
-      <section id="nature">
-        <h2>自然景觀</h2>
-        
-        <div class="grid grid-3">
-          <article id="lalashan" class="card sight-card eco-sustainable">
-            <img src="images/lalashan.jpg" alt="拉拉山巨木群步道">
-            <h3>拉拉山</h3>
-            <p><strong>海拔：</strong>1,500-2,000公尺</p>
-            <p>雲海、楓紅、檜木巨木群步道，四季各有風景。春季櫻花盛開，夏季避暑勝地，秋季楓紅滿山，冬季雲海壯觀。</p>
-            <p><strong>特色：</strong>神木群、雲海、櫻花季</p>
-            <p><strong>建議停留：</strong>半天至一天</p>
-          </article>
-          
-          <article id="xiaowulai" class="card sight-card tech-highlight">
-            <img src="images/xiaowulai.jpg" alt="小烏來天空步道與瀑布">
-            <h3>小烏來風景區</h3>
-            <p><strong>特色：</strong>天空步道、瀑布、彩虹橋</p>
-            <p>以天空步道與壯觀瀑布聞名，可俯瞰溪谷、觀賞彩虹橋。天空步道全長11公尺，透明玻璃地板讓遊客體驗懸空刺激。</p>
-            <p><strong>開放時間：</strong>08:00-17:00</p>
-            <p><strong>門票：</strong>全票50元</p>
-          </article>
-          
-          <article id="shihmen" class="card sight-card eco-sustainable">
-            <img src="images/shihmen.jpg" alt="石門水庫壩頂與湖景">
-            <h3>石門水庫</h3>
-            <p><strong>特色：</strong>環湖單車道、夕陽景緻、活魚美食</p>
-            <p>環湖單車道全長15公里，沿途可欣賞湖光山色。壩頂是觀賞夕陽的絕佳地點，周邊有許多活魚餐廳。</p>
-            <p><strong>建議活動：</strong>騎單車、賞夕陽、品嚐活魚</p>
-            <p><strong>最佳時間：</strong>下午3-6點</p>
-          </article>
+  <site-header></site-header>
+  <main class="container">
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="card">
+          <h3>景點分類</h3>
+          <ul>
+            <li><a href="#nature">自然景觀</a></li>
+            <li><a href="#heritage">人文古蹟</a></li>
+            <li><a href="#transport">交通地標</a></li>
+            <li><a href="#culture">文化聚落</a></li>
+          </ul>
         </div>
-      </section>
 
-      <section id="heritage">
-        <h2>人文古蹟</h2>
-        
-        <div class="grid grid-3">
-          <article id="daxi" class="card sight-card family-friendly">
-            <img src="images/daxi-oldstreet.jpg" alt="大溪老街巴洛克建築">
-            <h3>大溪老街</h3>
-            <p><strong>特色：</strong>巴洛克街屋、木作文化、老屋咖啡</p>
-            <p>保存完好的巴洛克立面與木藝文化，是懷舊散步的好地方。街道兩旁有許多傳統豆干店、木藝品店與咖啡廳。</p>
-            <p><strong>必吃：</strong>大溪豆干、花生糖</p>
-            <p><strong>必買：</strong>木藝品、傳統糕點</p>
-          </article>
-          
-          <article id="zhongzhen" class="card sight-card charming-taoyuan">
-            <img src="images/zhongzhen.jpg" alt="忠貞新村街景與雲南料理">
-            <h3>忠貞新村</h3>
-            <p><strong>特色：</strong>滇緬風味聚落、雲南料理</p>
-            <p>滇緬移民的聚落，街上充滿雲南料理與歷史故事。這裡是品嚐道地雲南菜的最佳地點。</p>
-            <p><strong>必吃：</strong>破酥包、米干、涼拌木瓜</p>
-            <p><strong>文化：</strong>滇緬移民歷史展示</p>
-          </article>
+        <div class="card">
+          <h3>推薦路線</h3>
+          <ul>
+            <li><a href="#route1">山線一日遊</a></li>
+            <li><a href="#route2">水庫環湖遊</a></li>
+            <li><a href="#route3">老街文化遊</a></li>
+            <li><a href="#route4">機場周邊遊</a></li>
+          </ul>
         </div>
-      </section>
+      </aside>
 
-      <section id="transport">
-        <h2>交通地標</h2>
-        
-        <div class="grid grid-3">
-          <article id="airport" class="card sight-card tech-highlight">
-            <img src="images/airport.jpg" alt="桃園國際機場航站大廳">
-            <h3>桃園國際機場</h3>
-            <p><strong>特色：</strong>臺灣門戶、現代化設施</p>
-            <p>臺灣對外的國際門戶，連結世界與在地。機場內有豐富的購物與餐飲選擇，是體驗台灣文化的第一站。</p>
-            <p><strong>設施：</strong>免稅店、美食廣場、休息區</p>
-            <p><strong>交通：</strong>機場捷運直達台北</p>
-          </article>
-        </div>
-      </section>
+      <section class="card">
+        <h1>桃園精選景點</h1>
 
-      <section id="culture">
-        <h2>文化聚落</h2>
-        
-        <div class="grid grid-2">
-          <article class="card sight-card">
-            <img src="images/hakka-village.jpg" alt="客家文化村">
-            <h3>客家文化村</h3>
-            <p><strong>特色：</strong>客家建築、傳統工藝</p>
-            <p>展示客家傳統建築與生活文化，有藍染工藝、客家美食等體驗活動。</p>
-            <p><strong>體驗：</strong>藍染DIY、客家美食製作</p>
-          </article>
-          
-          <article class="card sight-card">
-            <img src="images/indigenous-village.jpg" alt="原住民文化園區">
-            <h3>原住民文化園區</h3>
-            <p><strong>特色：</strong>泰雅族文化、傳統編織</p>
-            <p>展示拉拉山泰雅族原住民文化，有傳統編織、狩獵文化展示。</p>
-            <p><strong>體驗：</strong>編織工藝、原住民美食</p>
-          </article>
-        </div>
-      </section>
+        <section id="nature">
+          <h2>自然景觀</h2>
 
-      <section id="routes">
-        <h2>推薦旅遊路線</h2>
-        
-        <div class="grid grid-2">
-          <article id="route1" class="card">
-            <h3>山線一日遊</h3>
-            <p><strong>路線：</strong>拉拉山 → 小烏來 → 大溪老街</p>
-            <p>早上前往拉拉山欣賞神木群與雲海，下午到小烏來體驗天空步道，傍晚在大溪老街品嚐傳統美食。</p>
-            <p><strong>建議時間：</strong>8-10小時</p>
-            <p><strong>交通：</strong>建議自駕或包車</p>
-          </article>
-          
-          <article id="route2" class="card">
-            <h3>水庫環湖遊</h3>
-            <p><strong>路線：</strong>石門水庫 → 環湖單車道 → 活魚餐廳</p>
-            <p>上午騎單車環湖欣賞湖光山色，中午品嚐新鮮活魚料理，下午在壩頂觀賞夕陽。</p>
-            <p><strong>建議時間：</strong>6-8小時</p>
-            <p><strong>適合：</strong>親子、情侶</p>
-          </article>
-          
-          <article id="route3" class="card">
-            <h3>老街文化遊</h3>
-            <p><strong>路線：</strong>大溪老街 → 忠貞新村 → 客家文化村</p>
-            <p>體驗不同文化聚落的特色，從巴洛克建築到滇緬風味，再到客家文化。</p>
-            <p><strong>建議時間：</strong>4-6小時</p>
-            <p><strong>特色：</strong>文化體驗、美食探索</p>
-          </article>
-          
-          <article id="route4" class="card">
-            <h3>機場周邊遊</h3>
-            <p><strong>路線：</strong>桃園國際機場 → 華泰名品城 → 青埔高鐵站</p>
-            <p>適合轉機旅客的短暫停留，體驗台灣購物與美食文化。</p>
-            <p><strong>建議時間：</strong>2-4小時</p>
-            <p><strong>交通：</strong>機場捷運</p>
-          </article>
-        </div>
-      </section>
-    </section>
-  </div>
-</main>
+          <div class="grid grid-3">
+            <article id="lalashan" class="card sight-card eco-sustainable">
+              <img src="images/lalashan.jpg" alt="拉拉山巨木群步道">
+              <h3>拉拉山</h3>
+              <p><strong>海拔：</strong>1,500-2,000公尺</p>
+              <p>雲海、楓紅、檜木巨木群步道，四季各有風景。春季櫻花盛開，夏季避暑勝地，秋季楓紅滿山，冬季雲海壯觀。</p>
+              <p><strong>特色：</strong>神木群、雲海、櫻花季</p>
+              <p><strong>建議停留：</strong>半天至一天</p>
+            </article>
 
-<footer>
-  <div class="footer-wrap">
-    <div>
-      <strong>Taoyuan • 桃園</strong><br>
-      山海相連的國門城市
+            <article id="xiaowulai" class="card sight-card tech-highlight">
+              <img src="images/xiaowulai.jpg" alt="小烏來天空步道與瀑布">
+              <h3>小烏來風景區</h3>
+              <p><strong>特色：</strong>天空步道、瀑布、彩虹橋</p>
+              <p>以天空步道與壯觀瀑布聞名，可俯瞰溪谷、觀賞彩虹橋。天空步道全長11公尺，透明玻璃地板讓遊客體驗懸空刺激。</p>
+              <p><strong>開放時間：</strong>08:00-17:00</p>
+              <p><strong>門票：</strong>全票50元</p>
+            </article>
+
+            <article id="shihmen" class="card sight-card eco-sustainable">
+              <img src="images/shihmen.jpg" alt="石門水庫壩頂與湖景">
+              <h3>石門水庫</h3>
+              <p><strong>特色：</strong>環湖單車道、夕陽景緻、活魚美食</p>
+              <p>環湖單車道全長15公里，沿途可欣賞湖光山色。壩頂是觀賞夕陽的絕佳地點，周邊有許多活魚餐廳。</p>
+              <p><strong>建議活動：</strong>騎單車、賞夕陽、品嚐活魚</p>
+              <p><strong>最佳時間：</strong>下午3-6點</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="heritage">
+          <h2>人文古蹟</h2>
+
+          <div class="grid grid-3">
+            <article id="daxi" class="card sight-card family-friendly">
+              <img src="images/daxi-oldstreet.jpg" alt="大溪老街巴洛克建築">
+              <h3>大溪老街</h3>
+              <p><strong>特色：</strong>巴洛克街屋、木作文化、老屋咖啡</p>
+              <p>保存完好的巴洛克立面與木藝文化，是懷舊散步的好地方。街道兩旁有許多傳統豆干店、木藝品店與咖啡廳。</p>
+              <p><strong>必吃：</strong>大溪豆干、花生糖</p>
+              <p><strong>必買：</strong>木藝品、傳統糕點</p>
+            </article>
+
+            <article id="zhongzhen" class="card sight-card charming-taoyuan">
+              <img src="images/zhongzhen.jpg" alt="忠貞新村街景與雲南料理">
+              <h3>忠貞新村</h3>
+              <p><strong>特色：</strong>滇緬風味聚落、雲南料理</p>
+              <p>滇緬移民的聚落，街上充滿雲南料理與歷史故事。這裡是品嚐道地雲南菜的最佳地點。</p>
+              <p><strong>必吃：</strong>破酥包、米干、涼拌木瓜</p>
+              <p><strong>文化：</strong>滇緬移民歷史展示</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="transport">
+          <h2>交通地標</h2>
+
+          <div class="grid grid-3">
+            <article id="airport" class="card sight-card tech-highlight">
+              <img src="images/airport.jpg" alt="桃園國際機場航站大廳">
+              <h3>桃園國際機場</h3>
+              <p><strong>特色：</strong>臺灣門戶、現代化設施</p>
+              <p>臺灣對外的國際門戶，連結世界與在地。機場內有豐富的購物與餐飲選擇，是體驗台灣文化的第一站。</p>
+              <p><strong>設施：</strong>免稅店、美食廣場、休息區</p>
+              <p><strong>交通：</strong>機場捷運直達台北</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="culture">
+          <h2>文化聚落</h2>
+
+          <div class="grid grid-2">
+            <article class="card sight-card">
+              <img src="images/hakka-village.jpg" alt="客家文化村">
+              <h3>客家文化村</h3>
+              <p><strong>特色：</strong>客家建築、傳統工藝</p>
+              <p>展示客家傳統建築與生活文化，有藍染工藝、客家美食等體驗活動。</p>
+              <p><strong>體驗：</strong>藍染DIY、客家美食製作</p>
+            </article>
+
+            <article class="card sight-card">
+              <img src="images/indigenous-village.jpg" alt="原住民文化園區">
+              <h3>原住民文化園區</h3>
+              <p><strong>特色：</strong>泰雅族文化、傳統編織</p>
+              <p>展示拉拉山泰雅族原住民文化，有傳統編織、狩獵文化展示。</p>
+              <p><strong>體驗：</strong>編織工藝、原住民美食</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="routes">
+          <h2>推薦旅遊路線</h2>
+
+          <div class="grid grid-2">
+            <article id="route1" class="card">
+              <h3>山線一日遊</h3>
+              <p><strong>路線：</strong>拉拉山 → 小烏來 → 大溪老街</p>
+              <p>早上前往拉拉山欣賞神木群與雲海，下午到小烏來體驗天空步道，傍晚在大溪老街品嚐傳統美食。</p>
+              <p><strong>建議時間：</strong>8-10小時</p>
+              <p><strong>交通：</strong>建議自駕或包車</p>
+            </article>
+
+            <article id="route2" class="card">
+              <h3>水庫環湖遊</h3>
+              <p><strong>路線：</strong>石門水庫 → 環湖單車道 → 活魚餐廳</p>
+              <p>上午騎單車環湖欣賞湖光山色，中午品嚐新鮮活魚料理，下午在壩頂觀賞夕陽。</p>
+              <p><strong>建議時間：</strong>6-8小時</p>
+              <p><strong>適合：</strong>親子、情侶</p>
+            </article>
+
+            <article id="route3" class="card">
+              <h3>老街文化遊</h3>
+              <p><strong>路線：</strong>大溪老街 → 忠貞新村 → 客家文化村</p>
+              <p>體驗不同文化聚落的特色，從巴洛克建築到滇緬風味，再到客家文化。</p>
+              <p><strong>建議時間：</strong>4-6小時</p>
+              <p><strong>特色：</strong>文化體驗、美食探索</p>
+            </article>
+
+            <article id="route4" class="card">
+              <h3>機場周邊遊</h3>
+              <p><strong>路線：</strong>桃園國際機場 → 華泰名品城 → 青埔高鐵站</p>
+              <p>適合轉機旅客的短暫停留，體驗台灣購物與美食文化。</p>
+              <p><strong>建議時間：</strong>2-4小時</p>
+              <p><strong>交通：</strong>機場捷運</p>
+            </article>
+          </div>
+        </section>
+      </section>
     </div>
-    <div>
-      <a href="contact.html">聯絡我們</a> ｜ <a href="news.html">活動與新聞</a> ｜ <a href="services.html">旅遊服務</a>
-    </div>
-    <small>© 2025 Taoyuan City Student Project. 圖片僅供學術用途。</small>
-  </div>
-</footer>
+  </main>
+  <site-footer></site-footer>
 </body>
+
 </html>
