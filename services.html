@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
   <script src="scripts/shared-component.js"></script>
+  <script src="https://kit.fontawesome.com/220cacaf5e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,11 +18,11 @@
         <div class="card">
           <h3>服務分類</h3>
           <ul>
-            <li><a href="#accommodation">住宿服務</a></li>
-            <li><a href="#transportation">交通服務</a></li>
-            <li><a href="#dining">餐飲服務</a></li>
-            <li><a href="#migrant">移工服務</a></li>
-            <li><a href="#tourism">觀光服務</a></li>
+            <li><a href="#accommodation">住宿</a></li>
+            <li><a href="#transportation">交通</a></li>
+            <!-- <li><a href="#dining">餐飲服務</a></li> -->
+            <li><a href="#migrant">移工</a></li>
+            <li><a href="#tourism">觀光</a></li>
           </ul>
         </div>
 
@@ -31,7 +32,6 @@
             <li><strong>警察：</strong>110</li>
             <li><strong>消防：</strong>119</li>
             <li><strong>醫療：</strong>119</li>
-            <li><strong>旅遊諮詢：</strong>0800-011-765</li>
           </ul>
         </div>
       </aside>
@@ -40,37 +40,112 @@
         <h1>旅遊與在地服務</h1>
 
         <section id="accommodation">
-          <h2>住宿服務</h2>
+          <h2>住宿</h2>
+          <div class="accommodation-btn-container">
+            <button class="accommodation-btn" name="family">闔家同樂</button>
+            <button class="accommodation-btn" name="city">城市便捷</button>
+            <button class="accommodation-btn" name="nature">秘境山居</button>
+          </div>
 
-          <div class="grid grid-3">
+          <div class="grid grid-3" id="family">
             <article class="card">
-              <h3>市中心商務飯店</h3>
-              <p><strong>位置：</strong>桃園火車站周邊</p>
-              <p><strong>特色：</strong>交通便利、生活機能佳</p>
-              <p><strong>推薦：</strong>桃園大飯店、福容大飯店</p>
-              <p><strong>價格：</strong>2,000-4,000元/晚</p>
+              <img src="assets/images/service_family-1.webp">
+              <h3>名人堂花園大飯店</h3>
+              <p><strong>位置：</strong>龍潭區</p>
+              <p><strong>特色：</strong>卡通主題房型</p>
+              <a class="link-btn" href="https://hotel.fhgh.com.tw/" target="_blank">
+                <i class="fa-solid fa-link"></i>
+                前往官網</a>
             </article>
 
             <article class="card">
-              <h3>拉拉山民宿</h3>
-              <p><strong>位置：</strong>拉拉山風景區</p>
-              <p><strong>特色：</strong>賞雲海、楓紅的好據點</p>
-              <p><strong>推薦：</strong>拉拉山民宿、雲海山莊</p>
-              <p><strong>價格：</strong>1,500-3,000元/晚</p>
+              <img src="assets/images/service_family-2.webp">
+              <h3>南方莊園渡假飯店</h3>
+              <p><strong>位置：</strong>中壢區</p>
+              <p><strong>特色：</strong>豐富親子設施</p>
+              <a class="link-btn" href="https://www.southgarden.com.tw/" target="_blank">
+                <i class="fa-solid fa-link"></i>
+                前往官網</a>
             </article>
 
             <article class="card">
-              <h3>石門水庫度假村</h3>
-              <p><strong>位置：</strong>石門水庫周邊</p>
-              <p><strong>特色：</strong>湖景房、親近自然</p>
-              <p><strong>推薦：</strong>石門水庫度假村</p>
-              <p><strong>價格：</strong>2,500-5,000元/晚</p>
+              <img src="assets/images/service_family-3.webp">
+              <h3>六星-桃園館</h3>
+              <p><strong>位置：</strong>桃園區</p>
+              <p><strong>特色：</strong>鄰近親子景點</p>
+              <a class="link-btn" href="https://sixstartaoyuan.168inn.com.tw/zh-tw" target="_blank">
+                <i class="fa-solid fa-link"></i>
+                前往官網</a>
+            </article>
+          </div>
+
+          <div class="grid grid-3" id="city">
+            <article class="card">
+              <img src="assets/images/service_city-1.png">
+              <h3>青埔商旅</h3>
+              <p><strong>位置：</strong>大園區</p>
+              <p><strong>特色：</strong>近高鐵站，交通便捷</p>
+              <a class="link-btn" href="https://www.cphotel.com.tw/" target="_blank">
+                <i class="fa-solid fa-link"></i>
+                前往官網</a>
+            </article>
+
+            <article class="card">
+              <img src="assets/images/service_city-2.webp">
+              <h3>町 ．草休行館</h3>
+              <p><strong>位置：</strong>大園區</p>
+              <p><strong>特色：</strong>位於桃園機場內</p>
+              <a class="link-btn" href="https://www.chostay.com/" target="_blank">
+                <i class="fa-solid fa-link"></i>
+                前往官網</a>
+            </article>
+
+            <article class="card">
+              <img src="assets/images/service_city-3.webp">
+              <h3>城市商旅-桃園車站館</h3>
+              <p><strong>位置：</strong>桃園區</p>
+              <p><strong>特色：</strong>鄰近桃園車站</p>
+              <a class="link-btn" href="https://www.citysuites.com.tw/zh-tw/%E6%A1%83%E5%9C%92%E8%BB%8A%E7%AB%99%E9%A4%A8" target="_blank">
+                <i class="fa-solid fa-link"></i>
+                前往官網</a>
+            </article>
+          </div>
+
+          <div class="grid grid-3" id="nature">
+            <article class="card">
+              <img src="assets/images/service_nature-1.jpeg">
+              <h3>雲山房</h3>
+              <p><strong>位置：</strong>復興區</p>
+              <p><strong>特色：</strong>賞雲海好據點</p>
+              <a class="link-btn" href="https://www.cloud-villa.tw/" target="_blank">
+                <i class="fa-solid fa-link"></i>
+                前往官網</a>
+            </article>
+
+            <article class="card">
+              <img src="assets/images/service_nature-2.webp">
+              <h3>石門水庫福華渡假飯店</h3>
+              <p><strong>位置：</strong>龍潭區</p>
+              <p><strong>特色：</strong>群山環繞，湖景房</p>
+              <a class="link-btn" href="https://www.howard-hotels.com.tw/zh_TW/HotelVacation/116" target="_blank">
+                <i class="fa-solid fa-link"></i>
+                前往官網</a>
+            </article>
+
+            <article class="card">
+              <img src="assets/images/service_nature-3.jpg">
+              <h3>大溪老城四季行館</h3>
+              <p><strong>位置：</strong>大溪區</p>
+              <p><strong>特色：</strong>可眺望大溪田野及山巒</p>
+              <a class="link-btn" href="https://www.daxisiji.com/" target="_blank">
+                <i class="fa-solid fa-link"></i>
+                前往官網</a>
             </article>
           </div>
         </section>
 
         <section id="transportation">
-          <h2>交通服務</h2>
+          <h2>交通</h2>
 
           <div class="grid grid-2">
             <article class="card">
@@ -99,7 +174,7 @@
           </div>
         </section>
 
-        <section id="dining">
+        <!-- <section id="dining">
           <h2>餐飲服務</h2>
 
           <div class="grid grid-2">
@@ -119,10 +194,10 @@
               <p><strong>中壢車站：</strong>日式料理、韓式料理</p>
             </article>
           </div>
-        </section>
+        </section> -->
 
         <section id="migrant">
-          <h2>移工服務與支援</h2>
+          <h2>移工</h2>
           <p>桃園是外籍移工的重要聚集地，提供多項服務與支援。</p>
 
           <div class="grid grid-2">
@@ -163,7 +238,7 @@
         </section>
 
         <section id="tourism">
-          <h2>觀光服務</h2>
+          <h2>觀光</h2>
 
           <div class="grid grid-2">
             <article class="card">
@@ -188,22 +263,22 @@
             <div class="contact-info">
               <div class="contact-card">
                 <h4>桃園市觀光旅遊局</h4>
-                <p><strong>電話：</strong>03-332-2101</p>
+                <p><strong>電話：</strong>03-332-2101#6209</p>
                 <p><strong>地址：</strong>桃園市桃園區縣府路1號</p>
                 <p><strong>服務時間：</strong>週一至週五 08:00-17:00</p>
               </div>
 
               <div class="contact-card">
                 <h4>桃園國際機場服務台</h4>
-                <p><strong>電話：</strong>03-273-3726</p>
+                <p><strong>電話：</strong>03-398-2194</p>
                 <p><strong>位置：</strong>第一、二航廈入境大廳</p>
                 <p><strong>服務時間：</strong>24小時</p>
               </div>
 
               <div class="contact-card">
-                <h4>新住民聯合服務中心</h4>
-                <p><strong>電話：</strong>03-332-2101#1234</p>
-                <p><strong>地址：</strong>桃園市桃園區縣府路1號</p>
+                <h4>新住民家庭服務中心</h4>
+                <p><strong>電話：</strong>03-3330305</p>
+                <p><strong>地址：</strong>桃園市桃園區復興路135號2樓</p>
                 <p><strong>服務時間：</strong>週一至週五 08:00-17:00</p>
               </div>
             </div>
@@ -213,6 +288,31 @@
     </div>
   </main>
   <site-footer></site-footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".accommodation-btn");
+      const sections = document.querySelectorAll(".grid[id]");
+
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const targetId = button.getAttribute("name");
+
+          sections.forEach(section => {
+            if (section.id === targetId) {
+              section.style.display = "grid";
+            } else {
+              section.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // 預設顯示第一個分類
+      if (buttons.length > 0) {
+        buttons[0].click();
+      }
+    });
+  </script>
 </body>
 
 </html>

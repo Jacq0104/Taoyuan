@@ -1,11 +1,17 @@
 :root {
   /* 桃園市官方品牌色彩系統 */
-  --brand: #EC008C; /* 桃紅色：魅力桃園 */
-  --brand-dark: #B0006A; /* 桃紅色深色版本 */
-  --accent-blue: #96DCF0; /* 淺藍色：智慧科技 */
-  --accent-yellow: #FFEF64; /* 暖黃色：婦幼友善 */
-  --accent-green: #AADF64; /* 草綠色：環保永續 */
-  --accent: var(--accent-yellow); /* 預設強調色使用暖黃色 */
+  --brand: #EC008C;
+  /* 桃紅色：魅力桃園 */
+  --brand-dark: #B0006A;
+  /* 桃紅色深色版本 */
+  --accent-blue: #96DCF0;
+  /* 淺藍色：智慧科技 */
+  --accent-yellow: #FFEF64;
+  /* 暖黃色：婦幼友善 */
+  --accent-green: #AADF64;
+  /* 草綠色：環保永續 */
+  --accent: var(--accent-yellow);
+  /* 預設強調色使用暖黃色 */
   --bg: #f7f8fb;
   --text: #1f2937;
   --muted: #6b7280;
@@ -18,7 +24,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   color: var(--text);
@@ -39,6 +46,10 @@ img {
   z-index: 1000;
   background: white;
   box-shadow: var(--shadow);
+}
+
+section[id] {
+  scroll-margin-top: 80px;
 }
 
 .header-wrap {
@@ -139,7 +150,7 @@ nav.main-nav a {
   transition: all 0.3s ease;
 }
 
-nav.main-nav a[aria-current="page"], 
+nav.main-nav a[aria-current="page"],
 nav.main-nav a:hover {
   background: var(--brand);
   color: white;
@@ -170,6 +181,8 @@ aside.sidebar {
   box-shadow: var(--shadow);
   padding: 18px;
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .grid {
@@ -264,42 +277,44 @@ footer a {
   .layout {
     grid-template-columns: 1fr;
   }
-  
+
   aside.sidebar {
     position: static;
   }
-  
+
   .grid-3 {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 640px) {
-  .grid-3, .grid-2 {
+
+  .grid-3,
+  .grid-2 {
     grid-template-columns: 1fr;
   }
-  
+
   nav.main-nav ul {
     gap: 6px;
   }
-  
+
   .header-wrap {
     flex-wrap: wrap;
   }
-  
+
   .brand-title {
     font-size: 1em;
   }
-  
+
   .brand-logo {
     width: 28px;
     height: 28px;
   }
-  
+
   .language-switcher {
     gap: 3px;
   }
-  
+
   .lang-btn {
     padding: 3px 6px;
     font-size: 0.75em;
@@ -344,8 +359,17 @@ footer a {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.2); }
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
 
 .hero-section h1 {
@@ -458,4 +482,90 @@ footer a {
   object-fit: cover;
   border-radius: 8px 8px 0 0;
   margin: -18px -18px 16px -18px;
+}
+
+/* service styles */
+.accommodation-btn-container {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.accommodation-btn {
+  box-shadow: 0 0 0 var(--brand);
+  transition: 0.2s;
+  background-color: var(--bg);
+  border: 2px solid var(--brand);
+  border-radius: 10px;
+  color: var(--brand);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+.accommodation-btn:hover {
+  box-shadow: 3px 3px 0 var(--brand);
+  cursor: pointer;
+  transform: translate(-5px, -5px);
+}
+
+.card img {
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  height: 160px;
+  width: auto;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card p {
+  margin: 4px 0;
+}
+
+.link-btn {
+  float: right;
+  position: relative;
+  z-index: 0;
+  border: 2px solid currentColor;
+  border-radius: 20px;
+  color: var(--brand);
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.link-btn:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: var(--brand);
+  border-radius: 3rem;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+}
+
+.link-btn:hover:after {
+  transform: translate(0, 0);
+}
+
+.link-btn:hover {
+  border: 2px solid transparent;
+  color: #FFFFFF;
+  transform: scale(1.05);
+  will-change: transform;
 }
