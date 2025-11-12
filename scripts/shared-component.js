@@ -4,7 +4,7 @@ class HeaderComponent extends HTMLElement {
         const isEnglish = currentPath.includes('/en/');
         const isCzech = currentPath.includes('/cs/');
         const pathPrefix = isEnglish || isCzech ? '../' : '';
-        const logoPath = pathPrefix + 'images/桃園.png';
+        const logoPath = pathPrefix + 'assets/images/Logo.png';
         
         // Navigation items based on language
         let navItems, langSwitcher;
