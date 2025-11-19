@@ -735,3 +735,140 @@ footer a {
   transform: scale(1.05);
   will-change: transform;
 }
+
+/* Celebrity Card Styles */
+.celebrity-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  overflow: visible;
+}
+
+.celebrity-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.celebrity-card.card {
+  padding: 16px;
+}
+
+.celebrity-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  height: auto;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.celebrity-image-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 140px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.celebrity-image-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.celebrity-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.celebrity-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.celebrity-card h3 {
+  color: var(--brand);
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* 預設顯示 summary 文字 */
+.celebrity-summary {
+  display: block;
+  overflow: visible;
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.celebrity-summary p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 6px 0;
+  text-align: left;
+  color: #333;
+}
+
+.celebrity-summary p:last-child {
+  margin-bottom: 0;
+}
+
+.celebrity-wiki {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 20;
+}
+
+.celebrity-card a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.celebrity-card a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .celebrity-layout {
+    gap: 12px;
+  }
+  
+  .celebrity-image-link {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .celebrity-card {
+    padding: 12px;
+  }
+  
+  .celebrity-layout {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .celebrity-image-link {
+    width: 100%;
+    height: 200px;
+  }
+}
