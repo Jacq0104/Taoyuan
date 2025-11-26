@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
   <script src="scripts/shared-component.js"></script>
+  <script src="scripts/fish-carousel.js"></script>
 </head>
 
 <body>
@@ -89,7 +90,7 @@
             <article class="card">
               <h3>用餐資訊</h3>
               <p><strong>最佳時間：</strong>午餐時段（11:30-14:00）</p>
-              <p><strong>平均消費：</strong>100-200元/人</p>
+              <p><strong>平均消費：</strong>200-300元/人</p>
               <p><strong>特色：</strong>可體驗滇緬文化與歷史</p>
             </article>
           </div>
@@ -99,21 +100,57 @@
           <h2>石門水庫「活魚三吃」</h2>
           <p>以新鮮活魚現做，常見組合：清蒸、糖醋、味噌湯等，多人共享最對味。</p>
 
-          <div class="food-item eco-sustainable">
-            <img src="images/fish-dish.jpg" alt="活魚三吃餐桌呈現">
-            <div class="food-content">
-              <h3>活魚料理特色</h3>
-              <p><strong>清蒸魚：</strong>保持魚肉鮮甜，搭配薑絲與蔥花</p>
-              <p><strong>糖醋魚：</strong>酸甜開胃，適合配飯</p>
-              <p><strong>味噌魚湯：</strong>濃郁湯頭，暖胃又營養</p>
-              <p><strong>其他選擇：</strong>紅燒、椒鹽、蒜蓉等口味</p>
+          <div class="carousel-container fish-carousel">
+            <div class="carousel-slides">
+              <div class="carousel-slide">
+                <img src="https://flowingbridge.com/wp-content/uploads/2022/11/20220527121906_7.jpg" alt="活魚三吃餐桌呈現" class="carousel-image">
+                <div class="carousel-content">
+                  <h3>活魚三吃</h3>
+                  <p><strong>清蒸魚：</strong>保持魚肉鮮甜，搭配薑絲與蔥花</p>
+                  <p><strong>糖醋魚：</strong>酸甜開胃，適合配飯</p>
+                  <p><strong>味噌魚湯：</strong>濃郁湯頭，暖胃又營養</p>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <img src="https://flowingbridge.com/wp-content/uploads/2022/11/MG_0344_bonus-fx%E6%8B%B7%E8%B2%9D.jpg" alt="破酥包料理" class="carousel-image">
+                <div class="carousel-content">
+                  <h3>特色料理</h3>
+                  <p><strong>新鮮活魚：</strong>當日現捕，保證鮮度</p>
+                  <p><strong>多樣烹調：</strong>紅燒、椒鹽、蒜蓉等口味</p>
+                  <p><strong>共享饗宴：</strong>最適合4-8人多人聚餐</p>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <img src="https://flowingbridge.com/wp-content/uploads/2022/11/%E5%AE%B4%E6%9C%83.jpg" alt="宴會現場" class="carousel-image">
+                <div class="carousel-content">
+                  <h3>用餐體驗</h3>
+                  <p><strong>環境優美：</strong>邊用餐邊賞石門水庫風景</p>
+                  <p><strong>溫暖氛圍：</strong>適合家庭聚餐與朋友聚會</p>
+                  <p><strong>晚餐推薦：</strong>傍晚時段可欣賞湖景夕陽</p>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <img src="https://flowingbridge.com/wp-content/uploads/2022/11/batch_20220801-IMG_3180_%E6%B5%AE%E6%B0%B4%E5%8D%B00-scaled.jpg.webp" alt="活魚料理細節" class="carousel-image">
+                <div class="carousel-content">
+                  <h3>廚藝精選</h3>
+                  <p><strong>專業廚師：</strong>多年烹飪經驗，掌握火候與風味</p>
+                  <p><strong>新鮮食材：</strong>嚴選優質活魚與時令配菜</p>
+                  <p><strong>健康飲食：</strong>清湯清蒸低油，適合全年齡享用</p>
+                </div>
+              </div>
             </div>
+
+            <button class="carousel-btn prev" onclick="document.querySelector('.fish-carousel .carousel-slides').parentElement.previousPageFish?.()">❮</button>
+            <button class="carousel-btn next" onclick="document.querySelector('.fish-carousel .carousel-slides').parentElement.nextPageFish?.()">❯</button>
           </div>
 
           <div class="grid grid-2">
             <article class="card">
               <h3>推薦餐廳</h3>
-              <p><strong>石門活魚街：</strong>多家活魚餐廳聚集，選擇多樣</p>
+              <p><strong>小橋流水活魚餐廳：</strong>多家活魚餐廳聚集，選擇多樣</p>
               <p><strong>阿婆活魚：</strong>老字號餐廳，口味傳統</p>
               <p><strong>水庫活魚：</strong>環境優美，可邊用餐邊賞湖景</p>
             </article>
