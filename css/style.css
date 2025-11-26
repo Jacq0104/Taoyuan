@@ -975,7 +975,7 @@ footer a {
 
 .fish-carousel .carousel-content {
   width: 50%;
-  padding: 24px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -985,7 +985,7 @@ footer a {
 
 .fish-carousel .carousel-content h3 {
   color: var(--brand);
-  margin: 0 0 12px 0;
+  margin: 0 0 20px 0;
   font-size: 1.3rem;
   font-weight: 600;
 }
