@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
   <script src="scripts/shared-component.js"></script>
+  <script src="scripts/fish-carousel.js"></script>
 </head>
 
 <body>
@@ -89,7 +90,7 @@
             <article class="card">
               <h3>用餐資訊</h3>
               <p><strong>最佳時間：</strong>午餐時段（11:30-14:00）</p>
-              <p><strong>平均消費：</strong>100-200元/人</p>
+              <p><strong>平均消費：</strong>200-300元/人</p>
               <p><strong>特色：</strong>可體驗滇緬文化與歷史</p>
             </article>
           </div>
@@ -99,23 +100,59 @@
           <h2>石門水庫「活魚三吃」</h2>
           <p>以新鮮活魚現做，常見組合：清蒸、糖醋、味噌湯等，多人共享最對味。</p>
 
-          <div class="food-item eco-sustainable">
-            <img src="images/fish-dish.jpg" alt="活魚三吃餐桌呈現">
-            <div class="food-content">
-              <h3>活魚料理特色</h3>
-              <p><strong>清蒸魚：</strong>保持魚肉鮮甜，搭配薑絲與蔥花</p>
-              <p><strong>糖醋魚：</strong>酸甜開胃，適合配飯</p>
-              <p><strong>味噌魚湯：</strong>濃郁湯頭，暖胃又營養</p>
-              <p><strong>其他選擇：</strong>紅燒、椒鹽、蒜蓉等口味</p>
+          <div class="carousel-container fish-carousel">
+            <div class="carousel-slides">
+              <div class="carousel-slide">
+                <img src="https://flowingbridge.com/wp-content/uploads/2022/11/20220527121906_7.jpg" alt="活魚三吃餐桌呈現" class="carousel-image">
+                <div class="carousel-content">
+                  <h3>活魚三吃</h3>
+                  <p><strong>清蒸魚：</strong>保持魚肉鮮甜，搭配薑絲與蔥花</p>
+                  <p><strong>糖醋魚：</strong>酸甜開胃，適合配飯</p>
+                  <p><strong>味噌魚湯：</strong>濃郁湯頭，暖胃又營養</p>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <img src="https://flowingbridge.com/wp-content/uploads/2022/11/MG_0344_bonus-fx%E6%8B%B7%E8%B2%9D.jpg" alt="破酥包料理" class="carousel-image">
+                <div class="carousel-content">
+                  <h3>特色料理</h3>
+                  <p><strong>新鮮活魚：</strong>當日現捕，保證鮮度</p>
+                  <p><strong>多樣烹調：</strong>紅燒、椒鹽、蒜蓉等口味</p>
+                  <p><strong>共享饗宴：</strong>最適合4-8人多人聚餐</p>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <img src="https://flowingbridge.com/wp-content/uploads/2022/11/%E5%AE%B4%E6%9C%83.jpg" alt="宴會現場" class="carousel-image">
+                <div class="carousel-content">
+                  <h3>用餐體驗</h3>
+                  <p><strong>環境優美：</strong>邊用餐邊賞石門水庫風景</p>
+                  <p><strong>溫暖氛圍：</strong>適合家庭聚餐與朋友聚會</p>
+                  <p><strong>晚餐推薦：</strong>傍晚時段可欣賞湖景夕陽</p>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <img src="https://flowingbridge.com/wp-content/uploads/2022/11/batch_20220801-IMG_3180_%E6%B5%AE%E6%B0%B4%E5%8D%B00-scaled.jpg.webp" alt="活魚料理細節" class="carousel-image">
+                <div class="carousel-content">
+                  <h3>廚藝精選</h3>
+                  <p><strong>專業廚師：</strong>多年烹飪經驗，掌握火候與風味</p>
+                  <p><strong>新鮮食材：</strong>嚴選優質活魚與時令配菜</p>
+                  <p><strong>健康飲食：</strong>清湯清蒸低油，適合全年齡享用</p>
+                </div>
+              </div>
             </div>
+
+            <button class="carousel-btn prev" onclick="document.querySelector('.fish-carousel .carousel-slides').parentElement.previousPageFish?.()">❮</button>
+            <button class="carousel-btn next" onclick="document.querySelector('.fish-carousel .carousel-slides').parentElement.nextPageFish?.()">❯</button>
           </div>
 
           <div class="grid grid-2">
             <article class="card">
-              <h3>推薦餐廳</h3>
-              <p><strong>石門活魚街：</strong>多家活魚餐廳聚集，選擇多樣</p>
-              <p><strong>阿婆活魚：</strong>老字號餐廳，口味傳統</p>
-              <p><strong>水庫活魚：</strong>環境優美，可邊用餐邊賞湖景</p>
+              <h3>人氣推薦餐廳</h3>
+              <p><strong><a href="https://www.google.com/maps/search/小橋流水人家餐廳/@24.7832903,121.2048926,15z?entry=ttu&g_ep=EgoyMDI1MDExNzExLjI2IgotMTQ5NDM2NDkzMA%3D%3D" target="_blank" rel="noopener noreferrer">小橋流水人家餐廳</a>：</strong>經營超過三十年的老字號石門活魚餐廳，菜色豐富，推薦菜色包括砂鍋魚頭、刺椒鮮魚、蒜泥鮮魚、椒鹽鮮魚，招牌米苔目和糖醋魚也是不少人推薦的美味料理。</p>
+              <p><strong><a href="https://www.google.com/maps/search/南園活魚餐廳/@24.7832903,121.2048926,15z?entry=ttu&g_ep=EgoyMDI1MDExNzExLjI2IgotMTQ5NDM2NDkzMA%3D%3D" target="_blank" rel="noopener noreferrer">南園活魚餐廳</a>：</strong>老字號的石門活魚餐廳，以新鮮食材和大份量著稱。推薦菜色為一魚五吃，特別推薦蒜泥魚、糖醋魚、豆辦魚、炸魚塊和砂鍋魚頭，另外炸銀絲卷也是招牌菜。</p>
+              <p><strong><a href="https://www.google.com/maps/search/玉蘭活魚餐廳/@24.7832903,121.2048926,15z?entry=ttu&g_ep=EgoyMDI1MDExNzExLjI2IgotMTQ5NDM2NDkzMA%3D%3D" target="_blank" rel="noopener noreferrer">玉蘭活魚餐廳</a>：</strong>經營已久的活魚二吃老店。石門活魚三吃以紅燒、豆辦和砂鍋聞名，上菜速度快，份量充足，尤其是活魚三吃沒有土腥味，魚皮和骨刺處理得很好。</p>
             </article>
 
             <article class="card">
@@ -156,19 +193,49 @@
           <h2>在地小吃</h2>
           <p>桃園各區都有代表性的在地小吃，展現地方特色。</p>
 
-          <div class="grid grid-2">
-            <article class="card">
-              <h3>大溪豆干</h3>
-              <p>大溪老街的招牌美食，口感Q彈，有多種口味選擇。</p>
-              <p><strong>推薦店家：</strong>黃日香、萬里香</p>
-              <p><strong>特色：</strong>傳統手工製作，口感獨特</p>
-            </article>
+          <article class="card" style="margin-bottom: 20px;">
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <img src="https://hips.hearstapps.com/hmg-prod/images/187-2507-taste-the-city-04-2-687a173ced27a.jpg?crop=0.9994121105232215xw:1xh;center,top" alt="大溪豆干" style="width: 40%; height: 350px; border-radius: var(--radius); object-fit: cover;">
+              <div style="flex: 1;">
+                <h3>桃園大溪美食推薦：老阿伯現滷豆干</h3>
+                <p><strong>一鍋入味的豆選物</strong></p>
+                <p>大溪滷豆乾為今日街市重點小吃，老阿伯從早期只有一味滷豆干，發展到現在手足合力操持、各司其職，負責不同品項，素雞、素腸、素肚、豆皮卷、蘭花干，款款都要嚴選，來自不同的專門商，一鍋彷彿豆味小百貨。</p>
+                <p>「不入味」是禁忌詞，獨家滷方由外而內滲入，還要淋上大量蒜頭辣椒醬，使樸素豆味在佐料一筆一筆勾勒下，有了豐富且立體的味道。私房辣醬必要來上一匙，那是使人上癮的滋味。</p>
+                <p><strong><a href="https://share.google/XCVYU2GZeEELeNXeb" target="_blank" rel="noopener noreferrer">老阿伯現滷豆干</a></strong><br>
+                地址：桃園市大溪區中正路37號<br>
+                營業時間：平日 8:00~18:30；週末 8:00~19:00</p>
+              </div>
+            </div>
+          </article>
 
+          <article class="card" style="margin-bottom: 20px;">
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <img src="https://i0.wp.com/journey.tw/wp-content/uploads/2021-01-11-205348-10.jpg?resize=1100%2C734&quality=99&ssl=1" alt="黃大目豆乾" style="width: 40%; height: 350px; border-radius: var(--radius); object-fit: cover;">
+              <div style="flex: 1;">
+                <h3>大溪老街美食推薦：黃大目豆乾</h3>
+                <p><strong>熱滷豆乾的風味傳承</strong></p>
+                <p>黃大目豆乾可依照個人喜好調整鹹度、辣味，而吸飽了醬汁及湯汁的豆乾不僅有厚度、嚼勁，又多汁，滿滿的豆香在口中擴散開來。</p>
+                <p>尤其是店家特製的辣醬，加一點點就辣到額頭冒汗，在炎炎夏季中非常開胃。除了吃豆乾，不妨買一包豆乾回家延續旅行大溪的味道。</p>
+                <p>如果有時間，不妨把大溪的每一間豆乾都吃一回，非常推薦在店內用餐，一邊品嚐現滷的豆乾滷味，一邊感受屬於大溪特色的滷味熱氣。</p>
+                <p><strong><a href="https://journey.tw/huangdamu-tofu/" target="_blank" rel="noopener noreferrer">黃大目豆乾</a></strong><br>
+                地址：桃園市大溪區和平路37號<br>
+                營業時間：09:30～20:30</p>
+              </div>
+            </div>
+          </article>
+
+          <div class="grid grid-2">
             <article class="card">
               <h3>花生糖</h3>
               <p>大溪老街的傳統甜點，香脆可口，是伴手禮首選。</p>
-              <p><strong>推薦店家：</strong>老街花生糖</p>
+              <p><strong>推薦店家：</strong><a href="https://www.da-shi.com.tw/page.aspx?page=aboutus" target="_blank" rel="noopener noreferrer">廖心蘭豆乾</a></p>
               <p><strong>特色：</strong>手工製作，不添加防腐劑</p>
+            </article>
+
+            <article class="card">
+              <h3>大溪老街美食特色</h3>
+              <p>大溪老街匯聚了各式傳統手工美食，每一道都是世代相傳的好味道。從豆干到花生糖，每一口都承載著大溪人的飲食文化與觀光記憶。</p>
+              <p><strong>推薦：</strong>造訪老街時不妨慢食漫遊，享受傳統小吃的魅力。</p>
             </article>
           </div>
         </section>
