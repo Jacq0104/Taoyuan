@@ -1,139 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
+
 <head>
   <meta charset="utf-8">
   <title>News/Events｜Taoyuan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../css/style.css" rel="stylesheet">
-  <script src="scripts/shared-component.js"></script>
+  <script src="../scripts/shared-component.js"></script>
+  <script src="https://kit.fontawesome.com/220cacaf5e.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="header-wrap">
-    <a class="brand" href="index.html" aria-label="Taoyuan Home">
-      <span class="brand-logo" aria-hidden="true">
-        <img src="../images/桃園.png" alt="Taoyuan City Logo">
-      </span>
-      <span class="brand-title">Taoyuan • 桃園</span>
-    </a>
-    <nav class="main-nav" aria-label="Global">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="news.html" aria-current="page">News/Events</a></li>
-        <li><a href="history.html">History/Culture</a></li>
-        <li><a href="sights.html">Attractions</a></li>
-        <li><a href="food.html">Food</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="language-switcher">
-        <a href="../news.html" class="lang-btn">繁中</a>
-        <a href="news.html" class="lang-btn active">EN</a>
-        <a href="../cs/news.html" class="lang-btn">CS</a>
+  <site-header></site-header>
+  <main class="container">
+    <ul class="tabs">
+      <li data-tab-target="#news" class="tab active">News</li>
+      <li data-tab-target="#event" class="tab">Events</li>
+    </ul>
+    <div class="card">
+      <div id="news" data-tab-content class="active">
+        <h1>News</h1>
+        <div id="newsList" class="news-list"></div>
       </div>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="card">
-        <h3>Filter by Month</h3>
-        <ul>
-          <li><a href="#dec">December</a></li>
-          <li><a href="#jan">January</a></li>
-          <li><a href="#feb">February</a></li>
-        </ul>
+      <div id="event" data-tab-content>
+        <h1>Events</h1>
+        <div class="year-nav">
+          <button id="prev-year" class="year-btn" disabled>
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <span id="year-text" class="timeline-year">2025</span>
+          <button id="next-year" class="year-btn">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+        <div id="timeline-container"></div>
       </div>
-      
-      <div class="card">
-        <h3>Event Categories</h3>
-        <ul>
-          <li><a href="#nature">Nature Activities</a></li>
-          <li><a href="#culture">Cultural Events</a></li>
-          <li><a href="#food">Food Events</a></li>
-          <li><a href="#sports">Sports Events</a></li>
-        </ul>
-      </div>
-    </aside>
-
-    <section class="card">
-      <h1>Latest News / Event Calendar</h1>
-      
-      <section id="dec">
-        <h2>December Events</h2>
-        
-        <article class="event-item family-friendly">
-          <h3>Daxi Old Street Year-end Market</h3>
-          <p class="event-date">Every Saturday & Sunday 10:00–18:00</p>
-          <p>Handicrafts and local agricultural products, music stage, daily performances at 4 PM. Traditional woodcraft displays and Hakka food stalls on site.</p>
-          <span class="badge">Cultural Event</span>
-        </article>
-        
-        <article class="event-item eco-sustainable">
-          <h3>Lalashan Winter Hiking</h3>
-          <p class="event-date">Every Saturday 08:30 Meet</p>
-          <p>Please pay attention to warmth and trail announcements, mountain weather is changeable. Recommend bringing rain gear and sufficient water.</p>
-          <span class="badge">Nature Activity</span>
-        </article>
-        
-        <article class="event-item charming-taoyuan">
-          <h3>Zhongzhen New Village Yunnan Food Festival</h3>
-          <p class="event-date">12/15-12/17 11:00-20:00</p>
-          <p>Taste authentic Yunnan cuisine and experience Yunnan-Burma culture. Traditional costume displays and handicraft sales on site.</p>
-          <span class="badge">Food Event</span>
-        </article>
       </section>
-
-      <section id="jan">
-        <h2>January Events</h2>
-        
-        <article class="event-item eco-sustainable">
-          <h3>Shihmen Reservoir Cycling Day</h3>
-          <p class="event-date">1/12 (Sun) 07:00–11:00</p>
-          <p>15 km family route around the lake; on-site basic repair services provided. Registration fee includes insurance and supplies.</p>
-          <span class="badge">Sports Event</span>
-        </article>
-        
-        <article class="event-item tech-highlight">
-          <h3>Xiaowulai Skywalk Photography Contest</h3>
-          <p class="event-date">1/1-1/31 All day</p>
-          <p>Theme: "Beauty of Xiaowulai", welcome photography enthusiasts to participate. Winning works will be exhibited at Taoyuan City Library.</p>
-          <span class="badge">Cultural Event</span>
-        </article>
-      </section>
-
-      <section id="news">
-        <h2>Latest News</h2>
-        
-        <article class="event-item">
-          <h3>Taoyuan International Airport Terminal 3 Construction Progress</h3>
-          <p class="event-date">2025/12/01</p>
-          <p>Terminal 3 main structure is 80% complete, expected to open by end of 2026, will significantly improve Taoyuan Airport's service capacity.</p>
-        </article>
-        
-        <article class="event-item">
-          <h3>Daxi Old Street Selected as "Taiwan's Top 10 Tourism Towns"</h3>
-          <p class="event-date">2025/11/28</p>
-          <p>Daxi Old Street was recognized by the Tourism Bureau for its rich historical culture and well-preserved Baroque architecture.</p>
-        </article>
-      </section>
-    </section>
-  </div>
-</main>
-
-<footer>
-  <div class="footer-wrap">
-    <div>
-      <strong>Taoyuan • 桃園</strong><br>
-      Gateway city connecting mountains and sea
     </div>
-    <div>
-      <a href="contact.html">Contact Us</a> ｜ <a href="news.html">Events & News</a> ｜ <a href="services.html">Tourism Services</a>
-    </div>
-    <small>© 2025 Taoyuan City Student Project. Images for academic use only.</small>
-  </div>
-</footer>
+  </main>
+  <site-footer></site-footer>
+  <script src="../scripts/news_en.js"></script>
 </body>
+
 </html>
