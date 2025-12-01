@@ -515,33 +515,33 @@ footer a {
     gap: 10px;
     padding: 0 10px;
   }
-  
+
   .carousel-slide {
     min-width: calc(50% - 5px);
   }
-  
+
   .carousel-slide img {
     height: 420px;
   }
-  
+
   .carousel-btn {
     width: 40px;
     height: 40px;
   }
-  
+
   .carousel-btn-prev {
     left: 8px;
   }
-  
+
   .carousel-btn-next {
     right: 8px;
   }
-  
+
   .carousel-dots {
     bottom: 12px;
     gap: 6px;
   }
-  
+
   .carousel-dot {
     width: 8px;
     height: 8px;
@@ -553,20 +553,20 @@ footer a {
     gap: 8px;
     padding: 0 8px;
   }
-  
+
   .carousel-slide {
     min-width: calc(50% - 4px);
   }
-  
+
   .carousel-slide img {
     height: 280px;
   }
-  
+
   .slide-caption {
     padding: 12px;
     font-size: 0.9em;
   }
-  
+
   .carousel-btn {
     width: 36px;
     height: 36px;
@@ -653,9 +653,9 @@ footer a {
 
 /* service styles */
 .accommodation-btn-container {
-  width: 35%;
+  width: wrap-content;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   margin-bottom: 10px;
 }
@@ -669,6 +669,7 @@ footer a {
   color: var(--brand);
   font-weight: bold;
   padding: 0.5rem 1rem;
+  margin-right: 5px;
 }
 
 .accommodation-btn:hover {
@@ -692,9 +693,13 @@ footer a {
   margin: 4px 0;
 }
 
+.grid .card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 按鈕 */
 .link-btn {
-  float: right;
-  position: relative;
   z-index: 0;
   border: 2px solid currentColor;
   border-radius: 20px;
@@ -706,7 +711,7 @@ footer a {
   transition: 0.2s transform ease-in-out;
   will-change: transform;
   padding: 5px 10px;
-  margin-top: 10px;
+  margin-top: auto;
 }
 
 .link-btn:after {
@@ -851,7 +856,7 @@ footer a {
   .celebrity-layout {
     gap: 12px;
   }
-  
+
   .celebrity-image-link {
     width: 130px;
     height: 130px;
@@ -862,12 +867,12 @@ footer a {
   .celebrity-card {
     padding: 12px;
   }
-  
+
   .celebrity-layout {
     flex-direction: column;
     gap: 12px;
   }
-  
+
   .celebrity-image-link {
     width: 100%;
     height: 200px;
@@ -943,8 +948,237 @@ footer a {
   .grid-4 {
     grid-template-columns: 1fr;
   }
-  
+
   .food-image {
     height: 240px;
   }
+}
+
+/* news page */
+[data-tab-content] {
+  display: none;
+}
+
+[data-tab-content].active {
+  display: block;
+}
+
+.tabs {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 0;
+  width: 60%;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background-color: white;
+  box-shadow:
+    /* 上方 */
+    0 -5px 10px rgba(0, 0, 0, .07),
+    /* 右上 */
+    5px -5px 10px rgba(0, 0, 0, .07);
+  margin-right: 3px;
+}
+
+.tab:hover {
+  color: var(--brand);
+}
+
+.tab.active {
+  color: var(--brand);
+}
+
+.tabs+.card {
+  border-radius: 0px var(--radius) var(--radius) var(--radius);
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.news-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.news-image {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 12px;
+}
+
+.news-content {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0072e3;
+  text-decoration: none;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.news-title:hover {
+  text-decoration: underline;
+}
+
+.news-date {
+  font-size: 14px;
+  color: #555;
+}
+
+.timeline {
+  width: 90%;
+  max-width: 900px;
+  margin: 60px auto;
+  position: relative;
+}
+
+.timeline-year {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--brand);
+  margin: auto 10px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--brand);
+  margin-right: 25px;
+  flex-shrink: 0;
+  transition: 0.3s;
+  ;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 6px;
+  top: 14px;
+  width: 2px;
+  height: 100%;
+  background: #d6dde3;
+  z-index: -1;
+}
+
+.timeline-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  transition: 0.3s;
+}
+
+.timeline-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.year-nav {
+  display: flex;
+  align-items: center;
+}
+
+.year-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--brand);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.year-btn:hover {
+  cursor: pointer;
+}
+
+.year-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.card-image {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.card-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.card-location {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.card-desc {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid var(--brand);
+  border-radius: 4px;
+  color: var(--brand);
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.card-btn:hover {
+  background: var(--brand);
+  color: #fff;
 }
