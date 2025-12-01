@@ -2,19 +2,34 @@
 const tabs = document.querySelectorAll('[data-tab-target]');
 const tabContents = document.querySelectorAll('[data-tab-content]');
 
+function activateTabBySelector(selector) {
+    const target = document.querySelector(selector);
+    if (!target) return;
+
+    tabContents.forEach(tc => tc.classList.remove('active'));
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    target.classList.add('active');
+
+    const activeTab = document.querySelector(`[data-tab-target="${selector}"]`);
+    if (activeTab) activeTab.classList.add('active');
+}
+
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-        const target = document.querySelector(tab.dataset.tabTarget);
-        tabContents.forEach(tc => {
-            tc.classList.remove('active');
-        });
-        target.classList.add('active');
-        tabs.forEach(tab => {
-            tab.classList.remove('active');
-        });
-        tab.classList.add('active');
-        target.classList.add('active');
+        const selectoe = tab.dataset.tabTarget;
+        activateTabBySelector(selectoe);
     });
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+
+    if (hash === '#event') {
+        activateTabBySelector('#event');
+    } else {
+        activateTabBySelector('#news');
+    }
 });
 
 // 活動時間軸 
