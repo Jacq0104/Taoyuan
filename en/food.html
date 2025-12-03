@@ -81,10 +81,10 @@
 
           <div class="grid grid-2">
             <article class="card">
-              <h3>Recommended Shops</h3>
+              <h3>Recommended Restaurants</h3>
               <p><strong><a href="https://share.google/khMMVFfjWeD5op6f6" target="_blank" rel="noopener noreferrer">A-Mei Rice Noodles</a>:</strong>Long-established Yunnan restaurant with rich broth</p>
               <p><strong><a href="https://share.google/5ydogDAVWC1GopDI8" target="_blank" rel="noopener noreferrer">Zhongzhen New Village Market</a>:</strong>Multiple Yunnan snack stalls with diverse choices</p>
-              <p><strong><a href="https://share.google/UGTDuuZhn9vBjoz82" target="_blank" rel="noopener noreferrer">Yunnan Restaurant</a>:</strong>Authentic Yunnan-Burma flavors in a comfortable environment, a heritage Yunnan restaurant with private collection treasures</p>
+              <p><strong><a href="https://share.google/UGTDuuZhn9vBjoz82" target="_blank" rel="noopener noreferrer">Yunnan Restaurant</a>:</strong>Authentic Yunnan-Burma flavors in a comfortable environment</p>
             </article>
 
             <article class="card">
@@ -143,8 +143,17 @@
               </div>
             </div>
 
-            <button class="carousel-btn prev" onclick="document.querySelector('.fish-carousel .carousel-slides').parentElement.previousPageFish?.()">❮</button>
-            <button class="carousel-btn next" onclick="document.querySelector('.fish-carousel .carousel-slides').parentElement.nextPageFish?.()">❯</button>
+            <button class="carousel-btn carousel-btn-prev" aria-label="Previous">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="carousel-btn carousel-btn-next" aria-label="Next">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-dots"></div>
           </div>
 
           <div class="grid grid-2">
@@ -157,7 +166,7 @@
 
             <article class="card">
               <h3>Dining Suggestions</h3>
-              <p><strong>Best Time:</strong>Dinner hours, can enjoy sunset</p>
+              <p><strong>Best Time:</strong>Evening hours, can enjoy sunset</p>
               <p><strong>Recommended Group Size:</strong>4-8 people, can try various flavors</p>
               <p><strong>Average Cost:</strong>NT$300-500 per person</p>
             </article>
@@ -287,6 +296,7 @@
   </main>
   <site-footer></site-footer>
   <script src="../scripts/language-switcher.js"></script>
+  <script src="../scripts/carousel.js"></script>
 </body>
 
 </html>
