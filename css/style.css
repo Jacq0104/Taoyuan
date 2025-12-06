@@ -29,9 +29,205 @@ body {
   margin: 0;
   padding: 0;
   color: var(--text);
-  background: var(--bg);
+  background: transparent;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
   line-height: 1.6;
+  /* 為動畫背景設置 overflow 隱藏 */
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   Animated Background Blobs System
+   ======================================== */
+
+/* 主容器：包含所有的 blobs */
+.bg-blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f8fb 100%);
+}
+
+/* 單個 blob 的基本樣式 */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+/* Blob 1: 粉紅色，左上角區域 */
+.blob-1 {
+  width: 700px;
+  height: 700px;
+  background: #EC008C;
+  top: -250px;
+  left: -250px;
+  animation: float-blob-1 14s infinite ease-in-out;
+}
+
+/* Blob 2: 淺藍色，右下角區域 */
+.blob-2 {
+  width: 650px;
+  height: 650px;
+  background: #96DCF0;
+  bottom: -200px;
+  right: -200px;
+  animation: float-blob-2 16s infinite ease-in-out;
+}
+
+/* Blob 3: 暖黃色，中右區域 */
+.blob-3 {
+  width: 680px;
+  height: 680px;
+  background: #FFEF64;
+  top: 15%;
+  right: 0%;
+  animation: float-blob-3 18s infinite ease-in-out;
+}
+
+/* Blob 4: 綠色，左下角區域 */
+.blob-4 {
+  width: 620px;
+  height: 620px;
+  background: #f6e4daee;
+  bottom: -180px;
+  left: -180px;
+  animation: float-blob-4 19s infinite ease-in-out;
+}
+
+/* 動畫 1: 左上方的緩慢浮動 */
+@keyframes float-blob-1 {
+  0% {
+    transform: translate(0, 0) scale(0.9);
+  }
+  33% {
+    transform: translate(80px, -80px) scale(1.1);
+  }
+  66% {
+    transform: translate(40px, 80px) scale(0.95);
+  }
+  100% {
+    transform: translate(0, 0) scale(0.9);
+  }
+}
+
+/* 動畫 2: 右下方的緩慢浮動 */
+@keyframes float-blob-2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-80px, 80px) scale(1.05);
+  }
+  66% {
+    transform: translate(60px, -60px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* 動畫 3: 右側中央的緩慢浮動 */
+@keyframes float-blob-3 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-70px, 70px) scale(1.08);
+  }
+  66% {
+    transform: translate(70px, -70px) scale(0.92);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* 動畫 4: 左下方的緩慢浮動 */
+@keyframes float-blob-4 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(60px, -60px) scale(0.98);
+  }
+  66% {
+    transform: translate(-80px, 80px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* 響應式調整：平板設備 */
+@media (max-width: 768px) {
+  .blob-1 {
+    width: 300px;
+    height: 300px;
+    top: -80px;
+    left: -80px;
+  }
+
+  .blob-2 {
+    width: 250px;
+    height: 250px;
+    bottom: -60px;
+    right: -60px;
+  }
+
+  .blob-3 {
+    width: 280px;
+    height: 280px;
+    right: 5%;
+  }
+
+  .blob-4 {
+    width: 240px;
+    height: 240px;
+    bottom: -50px;
+    left: -50px;
+  }
+}
+
+/* 響應式調整：手機設備 */
+@media (max-width: 480px) {
+  .blob-1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+    filter: blur(35px);
+  }
+
+  .blob-2 {
+    width: 180px;
+    height: 180px;
+    bottom: -40px;
+    right: -40px;
+    filter: blur(35px);
+  }
+
+  .blob-3 {
+    width: 200px;
+    height: 200px;
+    filter: blur(35px);
+  }
+
+  .blob-4 {
+    width: 170px;
+    height: 170px;
+    bottom: -30px;
+    left: -30px;
+    filter: blur(35px);
+  }
 }
 
 img {
@@ -161,6 +357,8 @@ nav.main-nav a:hover {
   max-width: var(--maxw);
   margin: auto;
   padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .layout {
