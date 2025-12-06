@@ -1,13 +1,17 @@
 <!doctype html>
 <html lang="cs">
+
 <head>
   <meta charset="utf-8">
-  <title>Novinky/Akce｜Taoyuan</title>
+  <title>Zprávy/Akce｜Taoyuan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../css/style.css" rel="stylesheet">
+  <script src="../scripts/shared-component.js"></script>
+  <script src="https://kit.fontawesome.com/220cacaf5e.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <!-- 動畫背景 Blobs -->
+  <!-- Animated Background Blobs -->
   <div class="bg-blobs">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
@@ -15,133 +19,34 @@
     <div class="blob blob-4"></div>
   </div>
 
-<header class="site-header">
-  <div class="header-wrap">
-    <a class="brand" href="index.html" aria-label="Taoyuan Home">
-      <span class="brand-logo" aria-hidden="true">
-        <img src="../images/桃園.png" alt="Logo města Taoyuan">
-      </span>
-      <span class="brand-title">Taoyuan • 桃園</span>
-    </a>
-    <nav class="main-nav" aria-label="Global">
-      <ul>
-        <li><a href="index.html">Domů</a></li>
-        <li><a href="news.html" aria-current="page">Novinky/Akce</a></li>
-        <li><a href="history.html">Historie/Kultura</a></li>
-        <li><a href="sights.html">Atrakce</a></li>
-        <li><a href="food.html">Jídlo</a></li>
-        <li><a href="services.html">Služby</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-      </ul>
-      <div class="language-switcher">
-        <a href="../news.html" class="lang-btn">繁中</a>
-        <a href="../en/news.html" class="lang-btn">EN</a>
-        <a href="news.html" class="lang-btn active">CS</a>
+  <site-header></site-header>
+  <main class="container">
+    <ul class="tabs">
+      <li data-tab-target="#news" class="tab active">Zprávy</li>
+      <li data-tab-target="#event" class="tab">Akce</li>
+    </ul>
+    <div class="card">
+      <div id="news" data-tab-content class="active">
+        <h1>Zprávy</h1>
+        <div id="newsList" class="news-list"></div>
       </div>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="card">
-        <h3>Filtrovat podle měsíce</h3>
-        <ul>
-          <li><a href="#dec">Prosinec</a></li>
-          <li><a href="#jan">Leden</a></li>
-          <li><a href="#feb">Únor</a></li>
-        </ul>
+      <div id="event" data-tab-content>
+        <h1>Akce</h1>
+        <div class="year-nav">
+          <button id="prev-year" class="year-btn" disabled>
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <span id="year-text" class="timeline-year">2025</span>
+          <button id="next-year" class="year-btn">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+        <div id="timeline-container"></div>
       </div>
-      
-      <div class="card">
-        <h3>Kategorie akcí</h3>
-        <ul>
-          <li><a href="#nature">Přírodní aktivity</a></li>
-          <li><a href="#culture">Kulturní akce</a></li>
-          <li><a href="#food">Gastronomické akce</a></li>
-          <li><a href="#sports">Sportovní akce</a></li>
-        </ul>
-      </div>
-    </aside>
-
-    <section class="card">
-      <h1>Nejnovější novinky / Kalendář akcí</h1>
-      
-      <section id="dec">
-        <h2>Prosincové akce</h2>
-        
-        <article class="event-item family-friendly">
-          <h3>Vánoční trh staré čtvrti Daxi</h3>
-          <p class="event-date">Každou sobotu a neděli 10:00–18:00</p>
-          <p>Řemesla a místní zemědělské produkty, hudební pódium, denní vystoupení ve čtyři hodiny odpoledne. Na místě jsou tradiční dřevěné výrobky a stánky s hakka jídlem.</p>
-          <span class="badge">Kulturní akce</span>
-        </article>
-        
-        <article class="event-item eco-sustainable">
-          <h3>Zimní turistika Lalashan</h3>
-          <p class="event-date">Každou sobotu sraz v 08:30</p>
-          <p>Věnujte pozornost teplu a oznámením o stezkách, horská počasí je proměnlivé. Doporučujeme vzít si deštník a dostatek vody.</p>
-          <span class="badge">Přírodní aktivita</span>
-        </article>
-        
-        <article class="event-item charming-taoyuan">
-          <h3>Festival jünnanského jídla vesnice Zhongzhen</h3>
-          <p class="event-date">15.-17.12. 11:00-20:00</p>
-          <p>Ochutnejte autentickou jünnanskou kuchyni a zažijte jünnansko-barmskou kulturu. Na místě jsou tradiční kostýmy a prodej řemesel.</p>
-          <span class="badge">Gastronomická akce</span>
-        </article>
-      </section>
-
-      <section id="jan">
-        <h2>Lednové akce</h2>
-        
-        <article class="event-item eco-sustainable">
-          <h3>Den cyklistiky kolem přehrady Shihmen</h3>
-          <p class="event-date">12.1. (neděle) 07:00–11:00</p>
-          <p>15 km rodinná trasa kolem jezera; na místě jsou poskytovány základní opravy. Registrační poplatek zahrnuje pojištění a zásoby.</p>
-          <span class="badge">Sportovní akce</span>
-        </article>
-        
-        <article class="event-item tech-highlight">
-          <h3>Fotografická soutěž nebeské stezky Xiaowulai</h3>
-          <p class="event-date">1.-31.1. celý den</p>
-          <p>Téma: "Krása Xiaowulai", vítáni jsou nadšenci fotografie. Vítězné práce budou vystaveny v městské knihovně Taoyuan.</p>
-          <span class="badge">Kulturní akce</span>
-        </article>
-      </section>
-
-      <section id="news">
-        <h2>Nejnovější novinky</h2>
-        
-        <article class="event-item">
-          <h3>Pokrok ve stavbě terminálu 3 mezinárodního letiště Taoyuan</h3>
-          <p class="event-date">1.12.2025</p>
-          <p>Hlavní struktura terminálu 3 je dokončena z 80%, očekává se otevření koncem roku 2026, což výrazně zlepší kapacitu služeb letiště Taoyuan.</p>
-        </article>
-        
-        <article class="event-item">
-          <h3>Stara čtvrť Daxi vybrána jako "Top 10 turistických měst Tchaj-wanu"</h3>
-          <p class="event-date">28.11.2025</p>
-          <p>Stara čtvrť Daxi byla uznána turistickým úřadem za svou bohatou historickou kulturu a dobře zachovanou barokní architekturu.</p>
-        </article>
-      </section>
-    </section>
-  </div>
-</main>
-
-<footer>
-  <div class="footer-wrap">
-    <div>
-      <strong>Taoyuan • 桃園</strong><br>
-      Brána spojující hory a moře
     </div>
-    <div>
-      <a href="contact.html">Kontaktujte nás</a> ｜ <a href="news.html">Akce a novinky</a> ｜ <a href="services.html">Turistické služby</a>
-    </div>
-    <small>© 2025 Taoyuan City Student Project. Obrázky pouze pro akademické účely.</small>
-  </div>
-</footer>
-<script src="../scripts/language-switcher.js"></script>
+  </main>
+  <site-footer></site-footer>
+  <script src="../scripts/news_cs.js"></script>
 </body>
+
 </html>
