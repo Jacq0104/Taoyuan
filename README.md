@@ -2,6 +2,8 @@
 - Si Yu Chen（Brno login: xchensi00）
 - Yi Hsuan Kuo（Brno login: xkuoyih00）
 
+## Github Link：https://github.com/Jacq0104/Taoyuan.git
+
 # Taoyuan City Travel Guide Website (English Version)
 
 ## 1. Project Overview
