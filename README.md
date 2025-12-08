@@ -58,6 +58,8 @@ Key folders:
 
 # 桃園城市展示網站｜Taoyuan City Travel Guide
 
+## 連結：https://github.com/Jacq0104/Taoyuan.git
+
 ## 一、專案概述（繁體中文版）
 
 這是一個以「桃園 Taoyuan」為主題的旅遊導覽網站，讓使用者可以從**自然景觀、歷史文化、美食、旅遊服務**等面向，快速認識桃園這座「山海之間的國門城市」。  
