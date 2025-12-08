@@ -3,8 +3,7 @@ class HeaderComponent extends HTMLElement {
         const currentPath = window.location.pathname;
         const isEnglish = currentPath.includes('/en/');
         const isCzech = currentPath.includes('/cs/');
-        const pathPrefix = isEnglish || isCzech ? '../' : '';
-        const logoPath = pathPrefix + 'assets/images/Logo.png';
+        const logoPath = '/assets/images/Logo.png';
         
         // Navigation items based on language
         let navItems, langSwitcher;
@@ -59,7 +58,7 @@ class HeaderComponent extends HTMLElement {
         this.innerHTML = `
             <header class="site-header">
                 <div class="header-wrap">
-                    <a class="brand" href="${pathPrefix}index.html" aria-label="Taoyuan Home">
+                    <a class="brand" href="index.html" aria-label="Taoyuan Home">
                         <span class="brand-logo" aria-hidden="true">
                         <img src="${logoPath}" alt="桃園市LOGO">
                         </span>
@@ -99,7 +98,6 @@ class FooterComponent extends HTMLElement {
         const currentPath = window.location.pathname;
         const isEnglish = currentPath.includes('/en/');
         const isCzech = currentPath.includes('/cs/');
-        const pathPrefix = isEnglish || isCzech ? '../' : '';
         
         let footerContent, footerLinks, copyright;
         
