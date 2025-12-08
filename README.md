@@ -1,127 +1,161 @@
-# 桃園城市展示網站
+## Authors / 作者
+- Si Yu Chen（Brno login: xchensi00）
+- Yi Hsuan Kuo（Brno login: xkuoyih00）
 
-## 專案概述
-這是一個以「桃園 Taoyuan」為主題的城市展示網站，展現桃園的自然景觀、多元文化與在地美食特色。
+# Taoyuan City Travel Guide Website (English Version)
 
-## 專案特色
-- **山海之間的國門城市**：結合自然景觀與國際門戶特色
-- **小東南亞文化**：展現多元族群融合的獨特風貌
-- **客家文化核心**：突出桃園作為客家文化重鎮的地位
-- **完整旅遊資訊**：提供景點、美食、服務等全方位資訊
+## 1. Project Overview
 
-## 網站結構
-```
+This project is a **city introduction and travel guide website** for Taoyuan, Taiwan.  
+It showcases Taoyuan’s **natural scenery, history and Hakka culture, local food, transportation and tourism services**, and supports **Traditional Chinese, English and Czech**.
+
+## 2. Main Features
+
+- **Full page set**
+  - `index.html`: Home – hero section, image carousel, quick links.
+  - `news.html`: News & events page powered by JSON data.
+  - `history.html`: History timeline and Hakka culture.
+  - `sights.html`: Key attractions such as Lalashan, Xiaowulai, Shihmen Reservoir, Daxi Old Street, Zhongzhen New Village, Taoyuan Airport.
+  - `food.html`: Local food including live fish cuisine, Yunnan food in Zhongzhen, Hakka dishes, Daxi tofu and peanut candy.
+  - `services.html`: Transportation, visitor services, migrant support, tourism info.
+  - `contact.html`: Contact information and useful phone numbers.
+
+- **Multi-language structure**
+  - Root folder: Traditional Chinese pages.
+  - `/en/`: English versions of all pages.
+  - `/cs/`: Czech versions of all pages.
+  - Shared header and footer are implemented as custom elements `<site-header>` and `<site-footer>` in `scripts/shared-component.js`.
+  - `scripts/language-switcher.js` handles language buttons, URL mapping between languages, and preference storage.
+
+- **Interactive UI and data-driven content**
+  - Carousels implemented with `carousel.js` and `fish-carousel.js`.
+  - News & events are loaded from a JSON source (`assets/events.json` in the original design) by `news.js`, `news_en.js`, `news_cs.js`.
+  - Animated blob background (`.bg-blobs` and `.blob-1` ~ `.blob-4`) uses pure CSS animations with blur and low opacity, fixed behind all content.
+
+## 3. File & Folder Structure
+
+See the tree diagram in the Chinese section above for a full overview.  
+Key folders:
+
+- `css/style.css`: global styles, layout system, responsive breakpoints, animated background.
+- `scripts/`: shared components, language switcher, carousels, and news rendering logic.
+- `assets/images/`: images for attractions, food, and branding (`Logo.png`).
+
+## 4. Technology Highlights
+
+- **HTML5 semantic structure** with `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`.
+- **Responsive layout** using CSS Grid and Flexbox, plus media queries for different screen widths.
+- **Design system** based on Taoyuan city brand colors with CSS variables (`--brand`, `--accent-blue`, `--accent-yellow`, `--accent-green`, etc.), consistent border-radius and shadow tokens.
+- **No CSS framework** – all styling is implemented with hand-written CSS to meet the course requirements.
+
+## 5. Usage & Notes
+
+1. Open `landingPage.html` or `index.html` in a modern browser to view the site.
+2. For JSON-based features (news/events), running through a simple local server is recommended.
+3. All images and media in this project are for academic use only and should be replaced or licensed properly before any public deployment.
+
+---
+
+# 桃園城市展示網站｜Taoyuan City Travel Guide
+
+## 一、專案概述（繁體中文版）
+
+這是一個以「桃園 Taoyuan」為主題的旅遊導覽網站，讓使用者可以從**自然景觀、歷史文化、美食、旅遊服務**等面向，快速認識桃園這座「山海之間的國門城市」。  
+網站同時支援 **繁體中文／英文／捷克文** 三種語言，方便不同背景的使用者瀏覽。
+
+## 二、網站主要特色（繁體）
+
+- **完整的分頁導覽**
+  - `index.html`：首頁－城市形象、輪播圖、快速導覽
+  - `news.html`：新聞／活動／行事曆（由 `assets/events.json` 動態載入）
+  - `history.html`：歷史沿革與客家文化介紹
+  - `sights.html`：拉拉山、小烏來、石門水庫、大溪老街、忠貞新村、桃園機場等景點
+  - `food.html`：活魚料理、忠貞新村雲南料理、大溪豆乾與花生糖、客家美食等
+  - `services.html`：交通、旅遊諮詢、住宿與各類服務資訊
+  - `contact.html`：聯絡資訊與服務窗口
+
+- **三語版本與共用元件**
+  - `/en/` 資料夾：英文版對應的七個分頁
+  - `/cs/` 資料夾：捷克文版對應的七個分頁
+  - 透過 Web Components 自訂元素 `<site-header>`、`<site-footer>`，由 `scripts/shared-component.js` 統一產生全站的導覽列與頁尾。
+  - `scripts/language-switcher.js` 搭配 header 的語系按鈕，根據網址自動切換並記錄語言偏好。
+
+- **互動與資料驅動內容**
+  - 首頁與部分區塊使用 `scripts/carousel.js`、`scripts/fish-carousel.js` 製作圖片輪播。
+  - `news.html`／`en/news.html`／`cs/news.html` 使用 `news.js`、`news_en.js`、`news_cs.js` 自 `assets/events.json` 讀取活動與新聞資料並渲染到畫面。
+
+- **動畫背景與設計系統**
+  - 全站加入可重複使用的 `.bg-blobs` 動態背景，3～4 個柔和的漸層圓形使用 CSS Animation 緩慢漂移，搭配 `filter: blur()`、`pointer-events: none`，不影響操作。
+  - 透過 CSS 變數（如 `--brand`, `--accent-blue`, `--accent-yellow`, `--accent-green`）統一控制主色與陰影、圓角等設計。
+
+## 三、檔案與目錄結構（繁體）
+
+```text
 Taoyuan/
-├── index.html          # 首頁
-├── news.html           # 新聞/活動/行事曆
-├── history.html        # 歷史/文化（含客家文化）
-├── sights.html         # 景點介紹
-├── food.html           # 美食專區
-├── services.html       # 旅遊與在地服務
-├── contact.html        # 聯絡資訊
+├── landingPage.html          # 語言入口頁（連到中／英首頁）
+├── index.html                # 繁體中文首頁
+├── news.html                 # 繁中：新聞／活動
+├── history.html              # 繁中：歷史／文化／客家
+├── sights.html               # 繁中：景點介紹
+├── food.html                 # 繁中：美食專區
+├── services.html             # 繁中：旅遊與在地服務
+├── contact.html              # 繁中：聯絡資訊
+├── en/                       # 英文版所有分頁
+│   ├── index.html
+│   ├── news.html
+│   ├── history.html
+│   ├── sights.html
+│   ├── food.html
+│   ├── services.html
+│   └── contact.html
+├── cs/                       # 捷克文版所有分頁
+│   ├── index.html
+│   ├── news.html
+│   ├── history.html
+│   ├── sights.html
+│   ├── food.html
+│   ├── services.html
+│   └── contact.html
 ├── css/
-│   └── style.css       # 共用樣式檔
-├── images/             # 圖片素材
-│   └── README.md       # 圖片使用說明
-└── README.md           # 專案說明
+│   ├── style.css             # 全站共用樣式（含 RWD、動態背景、版面配置）
+│   └── landingPage.css       # 語言入口頁樣式
+├── scripts/
+│   ├── shared-component.js   # `<site-header>`、`<site-footer>` 定義與導覽列／語系切換
+│   ├── language-switcher.js  # 語系切換邏輯與偏好記錄
+│   ├── carousel.js           # 首頁等一般輪播
+│   ├── fish-carousel.js      # 活魚料理專區輪播
+│   ├── news.js               # 繁中新聞／活動渲染
+│   ├── news_en.js            # 英文新聞／活動渲染
+│   └── news_cs.js            # 捷克文新聞／活動渲染
+├── assets/
+│   ├── images/               # 網站圖片（景點、美食、LOGO 等）
+│   │   ├── Logo.png
+│   │   ├── lalashan.png / xiaowulai.png / zhongzhen.jpg ...
+│   │   └── README.md         # 圖片授權與來源說明
+│   └── mountains.MP4         # 影片素材（如有使用）
+└── README.md                 # 本說明文件（中英雙語）
 ```
 
-## 技術規範
-- **HTML5**：使用語意化標籤（header, nav, main, section, article, aside, footer）
-- **CSS3**：響應式設計、多欄佈局、固定導覽列
-- **無框架**：純CSS實作，不使用Bootstrap等第三方框架
-- **響應式**：支援桌面、平板、手機等不同裝置
-- **品牌色彩**：採用桃園市官方城市識別意象LOGO色彩系統
+## 四、技術與設計重點（繁體）
 
-## 主要景點
-- **拉拉山**：神木群、雲海、櫻花季
-- **小烏來風景區**：天空步道、瀑布、彩虹橋
-- **石門水庫**：環湖單車道、夕陽景緻、活魚美食
-- **大溪老街**：巴洛克建築、木藝文化、傳統小吃
-- **忠貞新村**：滇緬文化、雲南料理
-- **桃園國際機場**：國際門戶、現代化設施
+- **HTML5 語意化標籤**
+  - 全站使用 `header`, `nav`, `main`, `section`, `article`, `aside`, `footer` 等標籤，清楚區分導覽列、主內容、側邊欄與頁尾。
+  - 重要內容（例如卡片、景點介紹）以 `article` 包裝，提升可讀性與可維護性。
 
-## 美食特色
-- **雲南料理**：破酥包、米干、涼拌木瓜、香茅料理
-- **活魚三吃**：清蒸、糖醋、味噌湯等新鮮活魚料理
-- **客家美食**：粄條、菜包、擂茶、客家小炒
-- **在地小吃**：大溪豆干、花生糖、傳統糕點
+- **CSS 版面與 RWD**
+  - 以 `display: grid` 和 `display: flex` 建立多欄版面，例如 `.layout`, `.grid-2`, `.grid-3`, `.sidebar`。
+  - 使用 Media Queries 在不同寬度（如 980px 以下）自動改成單欄或調整間距，以適配桌機／平板／手機。
+  - 使用 CSS 變數統一控制色彩與圓角、陰影：`--brand`, `--accent-blue`, `--accent-yellow`, `--accent-green`, `--radius`, `--shadow` 等。
 
-## 文化特色
-- **客家文化**：全臺客家人口最多的城市，傳統節慶與工藝
-- **多元族群**：閩南、客家、原住民、新住民、外籍移工
-- **小東南亞**：東南亞移工文化形成的獨特餐飲街景
+- **JavaScript／互動**
+  - Web Components：`customElements.define('site-header', ...)` 與 `customElements.define('site-footer', ...)` 產生共用的導覽與頁尾。
+  - Carousel：使用 `setInterval` 搭配左右按鈕與指示點，自動與手動切換圖片。
+  - News：以 JSON 檔案為資料來源，依日期篩選並渲染活動／新聞列表。
+  - 語言切換：根據目前網址判斷語系，並在切換時導到對應語言的同名頁面。
 
-## 桃園市官方品牌色彩系統
-本網站採用桃園市官方城市識別意象LOGO的色彩理念：
+## 五、使用說明與注意事項（繁體）
 
-- **桃紅色 (#EC008C)**：魅力桃園 - 主要品牌色
-- **淺藍色 (#96DCF0)**：智慧科技 - 科技相關內容
-- **暖黃色 (#FFEF64)**：婦幼友善 - 文化、教育相關內容  
-- **草綠色 (#AADF64)**：環保永續 - 自然、環保相關內容
+1. 直接以瀏覽器打開根目錄的 `landingPage.html` 或 `index.html` 即可預覽網站。
+2. 若要於本機完整測試 JSON 載入功能，建議透過簡單的本機伺服器（如 VS Code Live Server）開啟專案。
+3. 本網站所有圖片與影片僅供課程與學術展示使用，實際發佈前請再次確認版權。
 
-色彩應用：
-- 不同類型的內容使用對應的品牌色彩
-- 品牌標誌融入桃園市LOGO的訊號粒子設計元素
-- 首頁Hero區域使用桃紅色漸層背景
-
-## 桃園市官方LOGO整合
-網站已整合桃園市官方城市識別意象LOGO：
-
-- **品牌標誌**：左上角使用桃園市官方LOGO圖片
-- **響應式設計**：LOGO在手機版自動調整大小（28x28px）
-- **無障礙設計**：提供適當的alt文字描述
-- **一致性**：所有頁面（中英文版本）都使用相同的LOGO
-- **檔案路徑**：`images/桃園.png`
-
-## 雙語切換功能
-網站支援繁體中文、英文切換：
-
-- **語言切換按鈕**：位於右上角導覽列
-- **繁體中文版本**：主要內容頁面
-- **英文版本**：位於 `/en/` 資料夾
-- **JavaScript功能**：自動識別當前語言並高亮對應按鈕
-- **響應式設計**：語言按鈕在手機版自動調整大小
-
-### 檔案結構
-```
-Taoyuan/
-├── index.html          # 繁體中文首頁
-├── news.html           # 繁體中文新聞頁面
-├── ...                 # 其他繁體中文頁面
-├── en/                 # 英文版本資料夾
-│   ├── index.html      # 英文首頁
-│   ├── news.html       # 英文新聞頁面
-│   └── ...             # 其他英文頁面
-└── scripts/
-    └── language-switcher.js  # 雙語切換功能
-```
-
-## 使用說明
-1. 將所有檔案放在同一個資料夾中
-2. 在 `images/` 資料夾中放入對應的圖片檔案
-3. 使用瀏覽器開啟 `index.html` 即可瀏覽網站
-4. 建議使用現代瀏覽器以獲得最佳顯示效果
-
-## 圖片需求
-請參考 `images/README.md` 檔案，了解所需圖片清單與免費圖片來源建議。
-
-## 專案完成度
-✅ 7個HTML頁面全部完成
-✅ 響應式CSS樣式設計
-✅ 固定導覽列與多欄佈局
-✅ 語意化HTML標籤使用
-✅ 圖片資料夾與使用說明
-✅ 符合課程要求的所有技術規範
-✅ 繁體中文/英文雙語切換功能
-✅ 桃園市官方品牌色彩系統
-✅ 桃園市官方LOGO整合
-
-## 注意事項
-- 圖片僅供學術用途，請確保版權合法
-- 可根據實際需要調整內容與樣式
-- 建議在正式展示前測試所有頁面連結
-- 可考慮加入JavaScript互動功能（非必要）
-
-## 聯絡資訊
-如有任何問題或建議，歡迎聯絡專案團隊。
