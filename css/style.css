@@ -463,6 +463,8 @@ footer {
   margin-top: 40px;
   background: #0d1b2a;
   color: #e5e7eb;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-wrap {

@@ -139,3 +139,5 @@ class FooterComponent extends HTMLElement {
 }
 
 customElements.define('site-footer', FooterComponent);
+
+console.log('✓ Header and Footer components registered successfully');
